@@ -111,11 +111,7 @@ Covered: nearest-driver selection, radius exclusion, invalid inputs, lifecycle t
 
 Implemented: Go API, Next.js dashboard, PostgreSQL/PostGIS persistence, spatial discovery, transactional reservations, concurrent demand experiments, and automated tests. Java, Kafka, Redis, moving-fleet simulation, authentication, and public deployment are not implemented. Ride history is currently unpaginated; reservation expiry and production hardening are also future work.
 
-Suggested resume bullet:
 
-> Built a Go and Next.js ride-dispatch prototype with PostgreSQL/PostGIS geospatial discovery, transactional driver reservations, persistent simulation reports, and tests covering 50 concurrent requests across two database connection pools.
-
-Explain `SKIP LOCKED`, the unique active-assignment index, and the timing definitions in an interview. Add latency claims only after a documented, repeatable benchmark.
 
 ## Phase 3: reproduce and share
 
