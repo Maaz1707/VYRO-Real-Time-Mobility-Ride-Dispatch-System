@@ -1,0 +1,2730 @@
+{
+  "createdAt": "2026-11-21T07:06:16.4712666Z",
+  "version": "0.3.0",
+  "storage": "postgres",
+  "scenario": "lifecycle",
+  "concurrency": 10,
+  "rounds": 3,
+  "requestsPerRound": 100,
+  "warmupRequests": 10,
+  "fleetSize": 12,
+  "os": "windows",
+  "arch": "amd64",
+  "logicalCPUs": 4,
+  "goVersion": "go1.27.4",
+  "notes": "Closed-loop local HTTP experiment against the direct Go API, excluding Next.js. POST latency includes connection, response headers/body, and JSON decoding; cancellation, integrity snapshots, and warmup are excluded from individual POST samples. Percentiles include failed requests if any. Total experiment time includes cancellation and integrity snapshots. No requests-per-second capacity claim is made. Saturation retains reservations until round end; lifecycle cancels each assigned ride before that worker's next POST. Mixed demand uses every fifth pickup outside the original fleet radius. Existing history, logging, pool size, and cache state can affect results. This does not model real traffic, routing, or production capacity.",
+  "summary": {
+    "requests": 300,
+    "assigned": 300,
+    "noDriver": 0,
+    "errors": 0,
+    "cleanupErrors": 0,
+    "duplicateActiveAssignments": 0,
+    "p50Ms": 3.4005,
+    "p95Ms": 6.5825,
+    "p99Ms": 9.3673,
+    "elapsedSeconds": 0.2539952
+  },
+  "samples": [
+    {
+      "round": 1,
+      "index": 0,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 5.6397,
+      "rideId": "b584b12fb357f7c75ca778ba",
+      "driverId": "Ananya"
+    },
+    {
+      "round": 1,
+      "index": 1,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.4736,
+      "rideId": "17a027acc0a46dc1efeafec5",
+      "driverId": "Neha"
+    },
+    {
+      "round": 1,
+      "index": 2,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 10.2455,
+      "rideId": "ae942593f25a76469fe9d62a",
+      "driverId": "Ishaan"
+    },
+    {
+      "round": 1,
+      "index": 3,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 8.2028,
+      "rideId": "019af8bccd4df6a14a34b0b3",
+      "driverId": "Aarav"
+    },
+    {
+      "round": 1,
+      "index": 4,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 5.126,
+      "rideId": "e6766158c69e7b045337f326",
+      "driverId": "Kabir"
+    },
+    {
+      "round": 1,
+      "index": 5,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 7.6891,
+      "rideId": "a404ebdf08de2c5df23e7eb4",
+      "driverId": "Dev"
+    },
+    {
+      "round": 1,
+      "index": 6,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 8.0516,
+      "rideId": "3db9b7fb40ce1651bfcb08b9",
+      "driverId": "Meera"
+    },
+    {
+      "round": 1,
+      "index": 7,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 9.3673,
+      "rideId": "9fc8f0e81e84adbf33ae2449",
+      "driverId": "Zoya"
+    },
+    {
+      "round": 1,
+      "index": 8,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 9.8729,
+      "rideId": "b47132dc9346bf74592af4c0",
+      "driverId": "Vikram"
+    },
+    {
+      "round": 1,
+      "index": 9,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 11.3775,
+      "rideId": "44f7821fc0503726d73f8724",
+      "driverId": "Rohan"
+    },
+    {
+      "round": 1,
+      "index": 10,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 7.6111,
+      "rideId": "9caaa6512f734117674667f5",
+      "driverId": "Aarav"
+    },
+    {
+      "round": 1,
+      "index": 11,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 7.181,
+      "rideId": "377d8348fd9093191183efd0",
+      "driverId": "Ishaan"
+    },
+    {
+      "round": 1,
+      "index": 12,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 6.5825,
+      "rideId": "c51e4f5c1666ffc8a5591ddc",
+      "driverId": "Neha"
+    },
+    {
+      "round": 1,
+      "index": 13,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 2.5486,
+      "rideId": "210e83f5a1dd38cc88997681",
+      "driverId": "Kabir"
+    },
+    {
+      "round": 1,
+      "index": 14,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 8.2746,
+      "rideId": "ab624b15e4c8f216de204f61",
+      "driverId": "Ananya"
+    },
+    {
+      "round": 1,
+      "index": 15,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 8.7839,
+      "rideId": "b8d4f1739b8ada801b347d90",
+      "driverId": "Zoya"
+    },
+    {
+      "round": 1,
+      "index": 16,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 7.9849,
+      "rideId": "a620304af4b8e330861ad5ae",
+      "driverId": "Dev"
+    },
+    {
+      "round": 1,
+      "index": 17,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 6.7931,
+      "rideId": "71b608d3b55b22c7b648fe8b",
+      "driverId": "Kabir"
+    },
+    {
+      "round": 1,
+      "index": 18,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 6.8513,
+      "rideId": "0768cbdf1cc26e5eb81c1a69",
+      "driverId": "Rohan"
+    },
+    {
+      "round": 1,
+      "index": 19,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 6.3011,
+      "rideId": "49838f4a009423508c639429",
+      "driverId": "Aarav"
+    },
+    {
+      "round": 1,
+      "index": 20,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 5.7437,
+      "rideId": "01e4d4b770a0d44dd6a738e9",
+      "driverId": "Ishaan"
+    },
+    {
+      "round": 1,
+      "index": 21,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 4.5539,
+      "rideId": "8404d77a6d1456e00f2b1286",
+      "driverId": "Neha"
+    },
+    {
+      "round": 1,
+      "index": 22,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.6086,
+      "rideId": "265913d491127ea82246784b",
+      "driverId": "Kabir"
+    },
+    {
+      "round": 1,
+      "index": 23,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.6606,
+      "rideId": "870625e71490c39841d4a30b",
+      "driverId": "Aarav"
+    },
+    {
+      "round": 1,
+      "index": 24,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.6606,
+      "rideId": "b1667bd83f31170881bafee7",
+      "driverId": "Ananya"
+    },
+    {
+      "round": 1,
+      "index": 25,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.4358,
+      "rideId": "5b220b4eb5c853fd9a81ff6d",
+      "driverId": "Meera"
+    },
+    {
+      "round": 1,
+      "index": 26,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.4358,
+      "rideId": "5c22ad9a1c76a544abc3c3a7",
+      "driverId": "Dev"
+    },
+    {
+      "round": 1,
+      "index": 27,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 2.8902,
+      "rideId": "d266fd6a32529cc902e8aa23",
+      "driverId": "Rohan"
+    },
+    {
+      "round": 1,
+      "index": 28,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 2.8902,
+      "rideId": "39a3d1159c5243a8e1117335",
+      "driverId": "Zoya"
+    },
+    {
+      "round": 1,
+      "index": 29,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 2.9576,
+      "rideId": "185dca9133f2751adacecb4e",
+      "driverId": "Vikram"
+    },
+    {
+      "round": 1,
+      "index": 30,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.8693,
+      "rideId": "16003a05da1d16de28ee8781",
+      "driverId": "Neha"
+    },
+    {
+      "round": 1,
+      "index": 31,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 5.1277,
+      "rideId": "79fce35c1884fa5753630982",
+      "driverId": "Aarav"
+    },
+    {
+      "round": 1,
+      "index": 32,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 5.1277,
+      "rideId": "bae9641ae42000d0e83344b4",
+      "driverId": "Ishaan"
+    },
+    {
+      "round": 1,
+      "index": 33,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 4.5545,
+      "rideId": "3dd34fe7edcbe62e67e1b507",
+      "driverId": "Kabir"
+    },
+    {
+      "round": 1,
+      "index": 34,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 4.4933,
+      "rideId": "b4f9455dc9c43de983b1763c",
+      "driverId": "Dev"
+    },
+    {
+      "round": 1,
+      "index": 35,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 5.8311,
+      "rideId": "e2b8f01e0c7349549701c7d6",
+      "driverId": "Ananya"
+    },
+    {
+      "round": 1,
+      "index": 36,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 4.5441,
+      "rideId": "9a7ff0a733251e7ffa1c4ef3",
+      "driverId": "Zoya"
+    },
+    {
+      "round": 1,
+      "index": 37,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 5.815,
+      "rideId": "2e5c942bd8b3fd34ca9c1634",
+      "driverId": "Meera"
+    },
+    {
+      "round": 1,
+      "index": 38,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 4.6655,
+      "rideId": "4ef4b2be7c44416ff9e70874",
+      "driverId": "Rohan"
+    },
+    {
+      "round": 1,
+      "index": 39,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.2288,
+      "rideId": "19008ecf5a86833c528553d5",
+      "driverId": "Vikram"
+    },
+    {
+      "round": 1,
+      "index": 40,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 2.8222,
+      "rideId": "278a78b0050e6c352b58f740",
+      "driverId": "Ishaan"
+    },
+    {
+      "round": 1,
+      "index": 41,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 2.8254,
+      "rideId": "86ef5e18b0a408b49f0bbb73",
+      "driverId": "Aarav"
+    },
+    {
+      "round": 1,
+      "index": 42,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 2.9041,
+      "rideId": "98dadf04fb191ff93eba8773",
+      "driverId": "Neha"
+    },
+    {
+      "round": 1,
+      "index": 43,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 2.9041,
+      "rideId": "88383c03dcc1d5e4fa87aeb0",
+      "driverId": "Kabir"
+    },
+    {
+      "round": 1,
+      "index": 44,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.6174,
+      "rideId": "784147bc702ec20f0e23e66f",
+      "driverId": "Ananya"
+    },
+    {
+      "round": 1,
+      "index": 45,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.0746,
+      "rideId": "2d1d99bf0cafdf2feb811eb6",
+      "driverId": "Zoya"
+    },
+    {
+      "round": 1,
+      "index": 46,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.0531,
+      "rideId": "44ce57f8ff0ee7595d689814",
+      "driverId": "Dev"
+    },
+    {
+      "round": 1,
+      "index": 47,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.0531,
+      "rideId": "892bf84feefb996ee30b680c",
+      "driverId": "Rohan"
+    },
+    {
+      "round": 1,
+      "index": 48,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.0923,
+      "rideId": "41afacc90628e9c8a9d36f48",
+      "driverId": "Meera"
+    },
+    {
+      "round": 1,
+      "index": 49,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.0477,
+      "rideId": "4d199a1c6c06c39e1c3ad57b",
+      "driverId": "Vikram"
+    },
+    {
+      "round": 1,
+      "index": 50,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.4099,
+      "rideId": "207a54a7d71649cc9432262f",
+      "driverId": "Neha"
+    },
+    {
+      "round": 1,
+      "index": 51,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 2.8405,
+      "rideId": "86bea9fd534a53959e899bc6",
+      "driverId": "Aarav"
+    },
+    {
+      "round": 1,
+      "index": 52,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 2.2435,
+      "rideId": "34dbcaa3a22fc20cde5bee7c",
+      "driverId": "Ishaan"
+    },
+    {
+      "round": 1,
+      "index": 53,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.2603,
+      "rideId": "850ab7674ede8fa83fa75885",
+      "driverId": "Kabir"
+    },
+    {
+      "round": 1,
+      "index": 54,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.6635,
+      "rideId": "1e619f596dbd45435ab1b7ba",
+      "driverId": "Dev"
+    },
+    {
+      "round": 1,
+      "index": 55,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.6635,
+      "rideId": "7683036a670ffca0f7eff472",
+      "driverId": "Ananya"
+    },
+    {
+      "round": 1,
+      "index": 56,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.7227,
+      "rideId": "3dc5c601bd30ae95d812d7ab",
+      "driverId": "Zoya"
+    },
+    {
+      "round": 1,
+      "index": 57,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 4.5771,
+      "rideId": "41e495cb5d2c697135471deb",
+      "driverId": "Vikram"
+    },
+    {
+      "round": 1,
+      "index": 58,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.6936,
+      "rideId": "fd8767995d863441ba851f71",
+      "driverId": "Rohan"
+    },
+    {
+      "round": 1,
+      "index": 59,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 5.0773,
+      "rideId": "ba50e03e73bb6242938470f8",
+      "driverId": "Arjun"
+    },
+    {
+      "round": 1,
+      "index": 60,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 4.1825,
+      "rideId": "4fd3ec00fd21a09b2f8e248a",
+      "driverId": "Ishaan"
+    },
+    {
+      "round": 1,
+      "index": 61,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 4.2065,
+      "rideId": "7d36762eb8445df9ef0035fd",
+      "driverId": "Aarav"
+    },
+    {
+      "round": 1,
+      "index": 62,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.5517,
+      "rideId": "6d15cfa7c698bdd38fa85083",
+      "driverId": "Neha"
+    },
+    {
+      "round": 1,
+      "index": 63,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.1052,
+      "rideId": "c1a5c97693eac16f4bb097b5",
+      "driverId": "Kabir"
+    },
+    {
+      "round": 1,
+      "index": 64,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.1052,
+      "rideId": "a9f7997194cfadf9f52dd4b4",
+      "driverId": "Ananya"
+    },
+    {
+      "round": 1,
+      "index": 65,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.6989,
+      "rideId": "0bca3469cdabce114f64ed9c",
+      "driverId": "Zoya"
+    },
+    {
+      "round": 1,
+      "index": 66,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.1772,
+      "rideId": "da2e783c4cac2e27b3c8f89f",
+      "driverId": "Dev"
+    },
+    {
+      "round": 1,
+      "index": 67,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.1274,
+      "rideId": "f8e84248d0b1b8fb8a9dcbe1",
+      "driverId": "Rohan"
+    },
+    {
+      "round": 1,
+      "index": 68,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.1274,
+      "rideId": "37b15c56340509fc84a47e45",
+      "driverId": "Meera"
+    },
+    {
+      "round": 1,
+      "index": 69,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.0821,
+      "rideId": "962bd726d4fe7d64b31dee30",
+      "driverId": "Arjun"
+    },
+    {
+      "round": 1,
+      "index": 70,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.2336,
+      "rideId": "10a8006a87333bdf506dae08",
+      "driverId": "Neha"
+    },
+    {
+      "round": 1,
+      "index": 71,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.8116,
+      "rideId": "a7a1cd3e9fd504c484750514",
+      "driverId": "Aarav"
+    },
+    {
+      "round": 1,
+      "index": 72,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.2792,
+      "rideId": "c432c19d6de2775e7b5d8ae8",
+      "driverId": "Ishaan"
+    },
+    {
+      "round": 1,
+      "index": 73,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.9142,
+      "rideId": "762a59abbf303bdeebe6f55d",
+      "driverId": "Kabir"
+    },
+    {
+      "round": 1,
+      "index": 74,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 2.8987,
+      "rideId": "ebeb10f3fa3b99de8e93517e",
+      "driverId": "Dev"
+    },
+    {
+      "round": 1,
+      "index": 75,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 2.2637,
+      "rideId": "e9701743e2310f85be5b7c09",
+      "driverId": "Ananya"
+    },
+    {
+      "round": 1,
+      "index": 76,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.2342,
+      "rideId": "e8d0d96951a56d54f5c914e0",
+      "driverId": "Meera"
+    },
+    {
+      "round": 1,
+      "index": 77,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 2.6339,
+      "rideId": "872215042cfa1281682bac4f",
+      "driverId": "Zoya"
+    },
+    {
+      "round": 1,
+      "index": 78,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.14,
+      "rideId": "698e548c0bca747d5f7307f3",
+      "driverId": "Vikram"
+    },
+    {
+      "round": 1,
+      "index": 79,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.14,
+      "rideId": "66bbcdac46ff07047339d797",
+      "driverId": "Rohan"
+    },
+    {
+      "round": 1,
+      "index": 80,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 4.4131,
+      "rideId": "da20b8f79a7f63a5fd254bac",
+      "driverId": "Ishaan"
+    },
+    {
+      "round": 1,
+      "index": 81,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.8704,
+      "rideId": "215146da33dae62b063343c7",
+      "driverId": "Aarav"
+    },
+    {
+      "round": 1,
+      "index": 82,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 4.3938,
+      "rideId": "fd9c71d5f7da151a618103fb",
+      "driverId": "Neha"
+    },
+    {
+      "round": 1,
+      "index": 83,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.8622,
+      "rideId": "71c027e96c39fcaa14d5ff67",
+      "driverId": "Kabir"
+    },
+    {
+      "round": 1,
+      "index": 84,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 4.2454,
+      "rideId": "77a60c003c84ae695c46af87",
+      "driverId": "Ananya"
+    },
+    {
+      "round": 1,
+      "index": 85,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 4.2454,
+      "rideId": "31435b992e67839872344929",
+      "driverId": "Zoya"
+    },
+    {
+      "round": 1,
+      "index": 86,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.6017,
+      "rideId": "ccf2ff022ad0b3de6932ced5",
+      "driverId": "Dev"
+    },
+    {
+      "round": 1,
+      "index": 87,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.6017,
+      "rideId": "e20d668b38febcac519120a7",
+      "driverId": "Meera"
+    },
+    {
+      "round": 1,
+      "index": 88,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.5181,
+      "rideId": "2b1f5ccd192d24f6f9ac73ce",
+      "driverId": "Rohan"
+    },
+    {
+      "round": 1,
+      "index": 89,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 2.9973,
+      "rideId": "bb8c20b7b656d3cfbb65f7ef",
+      "driverId": "Arjun"
+    },
+    {
+      "round": 1,
+      "index": 90,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.0218,
+      "rideId": "e39f978bda66290633fcb1dd",
+      "driverId": "Ishaan"
+    },
+    {
+      "round": 1,
+      "index": 91,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.0218,
+      "rideId": "05e2c4b47f9ec234e4452a35",
+      "driverId": "Neha"
+    },
+    {
+      "round": 1,
+      "index": 92,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 2.9939,
+      "rideId": "5aa797b2c1edd7ca3a630bfb",
+      "driverId": "Aarav"
+    },
+    {
+      "round": 1,
+      "index": 93,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 2.9939,
+      "rideId": "6a188b0804162d64c6340aec",
+      "driverId": "Kabir"
+    },
+    {
+      "round": 1,
+      "index": 94,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.331,
+      "rideId": "34c83bb6c95a86d80973e4e9",
+      "driverId": "Ananya"
+    },
+    {
+      "round": 1,
+      "index": 95,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.331,
+      "rideId": "96afc89a52750f3c2c1727ca",
+      "driverId": "Meera"
+    },
+    {
+      "round": 1,
+      "index": 96,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.2838,
+      "rideId": "e539684e0dafb3990882d7dc",
+      "driverId": "Dev"
+    },
+    {
+      "round": 1,
+      "index": 97,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.8558,
+      "rideId": "41b1da1f2243f4d1fe1c6d9e",
+      "driverId": "Rohan"
+    },
+    {
+      "round": 1,
+      "index": 98,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.2222,
+      "rideId": "f5e04a7c3fc39e3ece0788eb",
+      "driverId": "Zoya"
+    },
+    {
+      "round": 1,
+      "index": 99,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.8276,
+      "rideId": "561a2497f6fa12379e898265",
+      "driverId": "Vikram"
+    },
+    {
+      "round": 2,
+      "index": 0,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 4.226,
+      "rideId": "61871408b3632709a5c79611",
+      "driverId": "Neha"
+    },
+    {
+      "round": 2,
+      "index": 1,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.7197,
+      "rideId": "205c5156016f5aaa40a1eb15",
+      "driverId": "Ishaan"
+    },
+    {
+      "round": 2,
+      "index": 2,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 2.8808,
+      "rideId": "28fb021a4d40c058dbeac12c",
+      "driverId": "Aarav"
+    },
+    {
+      "round": 2,
+      "index": 3,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 4.226,
+      "rideId": "bc5748d56f3dabee2e0650c1",
+      "driverId": "Kabir"
+    },
+    {
+      "round": 2,
+      "index": 4,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.3864,
+      "rideId": "68bf33bb89692f96809a787d",
+      "driverId": "Dev"
+    },
+    {
+      "round": 2,
+      "index": 5,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 6.3547,
+      "rideId": "ceacc18ea7678aaecf11af9d",
+      "driverId": "Meera"
+    },
+    {
+      "round": 2,
+      "index": 6,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 5.6484,
+      "rideId": "9025246bb7df5e08a9cd2612",
+      "driverId": "Rohan"
+    },
+    {
+      "round": 2,
+      "index": 7,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 6.3547,
+      "rideId": "92c26a49cc65a07b8ffda3b4",
+      "driverId": "Zoya"
+    },
+    {
+      "round": 2,
+      "index": 8,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 6.4335,
+      "rideId": "5e1ca4002e774b794377593c",
+      "driverId": "Vikram"
+    },
+    {
+      "round": 2,
+      "index": 9,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 4.6189,
+      "rideId": "244dd0a56d9ffeb5a7358f8c",
+      "driverId": "Ananya"
+    },
+    {
+      "round": 2,
+      "index": 10,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.5033,
+      "rideId": "04beeec9343c47a99e5bab37",
+      "driverId": "Ishaan"
+    },
+    {
+      "round": 2,
+      "index": 11,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.4456,
+      "rideId": "c4cf4d77ad9ddab2e53c1e71",
+      "driverId": "Aarav"
+    },
+    {
+      "round": 2,
+      "index": 12,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.3626,
+      "rideId": "a66bc899006bc365aca47369",
+      "driverId": "Neha"
+    },
+    {
+      "round": 2,
+      "index": 13,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.3626,
+      "rideId": "95885a18899b7e36b80aea98",
+      "driverId": "Kabir"
+    },
+    {
+      "round": 2,
+      "index": 14,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 4.7138,
+      "rideId": "2351314f4ed2b6bb21e647c4",
+      "driverId": "Ananya"
+    },
+    {
+      "round": 2,
+      "index": 15,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 4.8934,
+      "rideId": "550d3579f6b51b0de333bf48",
+      "driverId": "Zoya"
+    },
+    {
+      "round": 2,
+      "index": 16,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 4.3285,
+      "rideId": "1f54b1bc8daebe61e300fedb",
+      "driverId": "Ishaan"
+    },
+    {
+      "round": 2,
+      "index": 17,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 4.8952,
+      "rideId": "625699c4295179662903e97b",
+      "driverId": "Dev"
+    },
+    {
+      "round": 2,
+      "index": 18,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 4.8872,
+      "rideId": "207f4f81ec72a6e071a686a9",
+      "driverId": "Rohan"
+    },
+    {
+      "round": 2,
+      "index": 19,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 4.8872,
+      "rideId": "08cd4c910b50324b37dd52fc",
+      "driverId": "Meera"
+    },
+    {
+      "round": 2,
+      "index": 20,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.7078,
+      "rideId": "9f4b2604097935ca6a37698a",
+      "driverId": "Aarav"
+    },
+    {
+      "round": 2,
+      "index": 21,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 2.8203,
+      "rideId": "7bfd45272817ba384b857a04",
+      "driverId": "Neha"
+    },
+    {
+      "round": 2,
+      "index": 22,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.3381,
+      "rideId": "aca5abcc81fbe5f2ec3d2fa6",
+      "driverId": "Kabir"
+    },
+    {
+      "round": 2,
+      "index": 23,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.2626,
+      "rideId": "b26849b588d50bb2b4208753",
+      "driverId": "Ishaan"
+    },
+    {
+      "round": 2,
+      "index": 24,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.2626,
+      "rideId": "4fbd89ff45e02d2ca0f078d2",
+      "driverId": "Ananya"
+    },
+    {
+      "round": 2,
+      "index": 25,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.321,
+      "rideId": "ae40ac542a9388b698493cd8",
+      "driverId": "Meera"
+    },
+    {
+      "round": 2,
+      "index": 26,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.3287,
+      "rideId": "e9e907f38a06243065479e6f",
+      "driverId": "Aarav"
+    },
+    {
+      "round": 2,
+      "index": 27,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 2.7365,
+      "rideId": "0c4d5fad802085c68abebb76",
+      "driverId": "Dev"
+    },
+    {
+      "round": 2,
+      "index": 28,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.3283,
+      "rideId": "09bcafb9100306494015f37a",
+      "driverId": "Zoya"
+    },
+    {
+      "round": 2,
+      "index": 29,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 2.8123,
+      "rideId": "bd68f977354393a83b7156c2",
+      "driverId": "Vikram"
+    },
+    {
+      "round": 2,
+      "index": 30,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 2.4619,
+      "rideId": "7e52fef438a1951082c1bf0f",
+      "driverId": "Neha"
+    },
+    {
+      "round": 2,
+      "index": 31,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.4005,
+      "rideId": "3a9c198d3c9bd95cc9d4d6f1",
+      "driverId": "Aarav"
+    },
+    {
+      "round": 2,
+      "index": 32,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.2057,
+      "rideId": "1bd46f8d94f988d6bdac5bd2",
+      "driverId": "Ishaan"
+    },
+    {
+      "round": 2,
+      "index": 33,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.2057,
+      "rideId": "27c93dc74ab5bb11a14123de",
+      "driverId": "Kabir"
+    },
+    {
+      "round": 2,
+      "index": 34,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.1581,
+      "rideId": "9617eaa8fd4fbd4d77a99ad4",
+      "driverId": "Dev"
+    },
+    {
+      "round": 2,
+      "index": 35,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 2.9544,
+      "rideId": "6e6def12e16c490d921362b2",
+      "driverId": "Ananya"
+    },
+    {
+      "round": 2,
+      "index": 36,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 2.9544,
+      "rideId": "474801a88f9068aa8fc09ac4",
+      "driverId": "Neha"
+    },
+    {
+      "round": 2,
+      "index": 37,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 2.7049,
+      "rideId": "2e243b01ca2b2109cc00f07c",
+      "driverId": "Zoya"
+    },
+    {
+      "round": 2,
+      "index": 38,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.2544,
+      "rideId": "734cb578fcb3854393998ca1",
+      "driverId": "Rohan"
+    },
+    {
+      "round": 2,
+      "index": 39,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 2.7004,
+      "rideId": "8b12e845025046e652ead9c8",
+      "driverId": "Meera"
+    },
+    {
+      "round": 2,
+      "index": 40,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 4.1993,
+      "rideId": "ffa25b64c7a77c85a3d5b2cb",
+      "driverId": "Ishaan"
+    },
+    {
+      "round": 2,
+      "index": 41,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 4.9685,
+      "rideId": "6e71165a5d0da31929f78079",
+      "driverId": "Aarav"
+    },
+    {
+      "round": 2,
+      "index": 42,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 4.9685,
+      "rideId": "b5b60b72e15b2b3a2e085a8c",
+      "driverId": "Neha"
+    },
+    {
+      "round": 2,
+      "index": 43,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 4.4791,
+      "rideId": "17552afb2e31651f5baa1ea7",
+      "driverId": "Kabir"
+    },
+    {
+      "round": 2,
+      "index": 44,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 4.1271,
+      "rideId": "8f1a8d7fbe5254ff4941220f",
+      "driverId": "Ananya"
+    },
+    {
+      "round": 2,
+      "index": 45,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.5498,
+      "rideId": "1ca46e3e43e4f41cebd59a2d",
+      "driverId": "Zoya"
+    },
+    {
+      "round": 2,
+      "index": 46,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.5498,
+      "rideId": "c14d328e615f1b6ec643d8a0",
+      "driverId": "Ishaan"
+    },
+    {
+      "round": 2,
+      "index": 47,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 2.8668,
+      "rideId": "3901913a441f1aac676185d8",
+      "driverId": "Dev"
+    },
+    {
+      "round": 2,
+      "index": 48,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.3864,
+      "rideId": "943ebbd434545f3246123809",
+      "driverId": "Rohan"
+    },
+    {
+      "round": 2,
+      "index": 49,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 2.7755,
+      "rideId": "f77dc87f506a4ba4cb8a2975",
+      "driverId": "Vikram"
+    },
+    {
+      "round": 2,
+      "index": 50,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.6224,
+      "rideId": "0a56e0304e40250ca286d1c7",
+      "driverId": "Neha"
+    },
+    {
+      "round": 2,
+      "index": 51,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.254,
+      "rideId": "f8b3dda28b7b147e3a4d85f9",
+      "driverId": "Aarav"
+    },
+    {
+      "round": 2,
+      "index": 52,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.823,
+      "rideId": "3cf9a65b3304f9667623f136",
+      "driverId": "Ishaan"
+    },
+    {
+      "round": 2,
+      "index": 53,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.2297,
+      "rideId": "86e887be5f1cdea72a95347d",
+      "driverId": "Kabir"
+    },
+    {
+      "round": 2,
+      "index": 54,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.9141,
+      "rideId": "43c89f7cb5ab891aa3547789",
+      "driverId": "Dev"
+    },
+    {
+      "round": 2,
+      "index": 55,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.6242,
+      "rideId": "fd5e97cab860d2f39e7a0c33",
+      "driverId": "Ananya"
+    },
+    {
+      "round": 2,
+      "index": 56,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.12,
+      "rideId": "162867d615e8f9f166b3a8c8",
+      "driverId": "Neha"
+    },
+    {
+      "round": 2,
+      "index": 57,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.6351,
+      "rideId": "469ddb54e32a8c77953500aa",
+      "driverId": "Zoya"
+    },
+    {
+      "round": 2,
+      "index": 58,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 2.92,
+      "rideId": "4c3899caf0745c52de8778a6",
+      "driverId": "Rohan"
+    },
+    {
+      "round": 2,
+      "index": 59,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 2.8771,
+      "rideId": "51839e8f41fc1a52ee97cde3",
+      "driverId": "Vikram"
+    },
+    {
+      "round": 2,
+      "index": 60,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.3983,
+      "rideId": "398b2c00705f633ca1b85368",
+      "driverId": "Aarav"
+    },
+    {
+      "round": 2,
+      "index": 61,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 4.4476,
+      "rideId": "13129b94c12c735afbc76b52",
+      "driverId": "Ishaan"
+    },
+    {
+      "round": 2,
+      "index": 62,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.9309,
+      "rideId": "52b4df155f46c353cc6aac59",
+      "driverId": "Neha"
+    },
+    {
+      "round": 2,
+      "index": 63,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 4.5681,
+      "rideId": "d69df0ba7e3e9ed94254c6b2",
+      "driverId": "Kabir"
+    },
+    {
+      "round": 2,
+      "index": 64,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 4.1558,
+      "rideId": "9ea0c24ad2ba15d1f5c45351",
+      "driverId": "Ananya"
+    },
+    {
+      "round": 2,
+      "index": 65,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 4.1558,
+      "rideId": "d1e7535bfea34c9fb94bfaf3",
+      "driverId": "Aarav"
+    },
+    {
+      "round": 2,
+      "index": 66,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 4.307,
+      "rideId": "7ef5f411190f3b51f55aae56",
+      "driverId": "Zoya"
+    },
+    {
+      "round": 2,
+      "index": 67,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 4.9705,
+      "rideId": "c57fcfe0538b1f51c65a4385",
+      "driverId": "Dev"
+    },
+    {
+      "round": 2,
+      "index": 68,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.7049,
+      "rideId": "43aa05a60d038d170a113b27",
+      "driverId": "Rohan"
+    },
+    {
+      "round": 2,
+      "index": 69,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.2335,
+      "rideId": "cf7f9b838649ac3370e710ff",
+      "driverId": "Meera"
+    },
+    {
+      "round": 2,
+      "index": 70,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.2248,
+      "rideId": "c07b4f17cf698df6a6c26c60",
+      "driverId": "Neha"
+    },
+    {
+      "round": 2,
+      "index": 71,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.3455,
+      "rideId": "d4d8c2a7b327719cf723b039",
+      "driverId": "Aarav"
+    },
+    {
+      "round": 2,
+      "index": 72,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 2.7422,
+      "rideId": "eb76b72000c8db927cfc95dc",
+      "driverId": "Ishaan"
+    },
+    {
+      "round": 2,
+      "index": 73,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.2865,
+      "rideId": "abdb02185244f14d47d22f01",
+      "driverId": "Kabir"
+    },
+    {
+      "round": 2,
+      "index": 74,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 2.8107,
+      "rideId": "3d735ccecd8050aac5f7c92e",
+      "driverId": "Dev"
+    },
+    {
+      "round": 2,
+      "index": 75,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 2.8107,
+      "rideId": "c26a0f863469fbac209a03b5",
+      "driverId": "Neha"
+    },
+    {
+      "round": 2,
+      "index": 76,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 2.8608,
+      "rideId": "c1fde84196634957503d5cc3",
+      "driverId": "Ananya"
+    },
+    {
+      "round": 2,
+      "index": 77,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.213,
+      "rideId": "a845bef5698881a8294a0f59",
+      "driverId": "Zoya"
+    },
+    {
+      "round": 2,
+      "index": 78,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 2.6469,
+      "rideId": "738b7c47546b70dc48e813a7",
+      "driverId": "Vikram"
+    },
+    {
+      "round": 2,
+      "index": 79,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.1519,
+      "rideId": "c91bb1f62825480682b4b009",
+      "driverId": "Rohan"
+    },
+    {
+      "round": 2,
+      "index": 80,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 2.7888,
+      "rideId": "6c02906637d2512273d75222",
+      "driverId": "Ishaan"
+    },
+    {
+      "round": 2,
+      "index": 81,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.5773,
+      "rideId": "a7ebe06a496c8b29d75b77be",
+      "driverId": "Aarav"
+    },
+    {
+      "round": 2,
+      "index": 82,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 2.7263,
+      "rideId": "bcad8371a71c066d7f17ce9a",
+      "driverId": "Neha"
+    },
+    {
+      "round": 2,
+      "index": 83,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 2.7263,
+      "rideId": "6982bf1f5bff0638a03d5a82",
+      "driverId": "Kabir"
+    },
+    {
+      "round": 2,
+      "index": 84,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 2.8646,
+      "rideId": "a0e3abba312f8fefa7f256bb",
+      "driverId": "Ananya"
+    },
+    {
+      "round": 2,
+      "index": 85,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 2.9691,
+      "rideId": "59b62ca45ca5bad35613b4b8",
+      "driverId": "Zoya"
+    },
+    {
+      "round": 2,
+      "index": 86,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 2.4469,
+      "rideId": "b57480ea984060460b26f9c0",
+      "driverId": "Dev"
+    },
+    {
+      "round": 2,
+      "index": 87,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.0913,
+      "rideId": "99e36cc87ebb3be5d0402c5c",
+      "driverId": "Ishaan"
+    },
+    {
+      "round": 2,
+      "index": 88,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 2.5154,
+      "rideId": "4c78884ca01a834a47d7087e",
+      "driverId": "Rohan"
+    },
+    {
+      "round": 2,
+      "index": 89,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.1234,
+      "rideId": "f73bdf8e6909e57c36e1a1aa",
+      "driverId": "Meera"
+    },
+    {
+      "round": 2,
+      "index": 90,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 4.7454,
+      "rideId": "12e1506143fd21e6ac146bf4",
+      "driverId": "Aarav"
+    },
+    {
+      "round": 2,
+      "index": 91,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 4.5798,
+      "rideId": "0bbc0d379a5a5be24f58a760",
+      "driverId": "Neha"
+    },
+    {
+      "round": 2,
+      "index": 92,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.9606,
+      "rideId": "a4f59c9fb064f6b7d1f0844a",
+      "driverId": "Kabir"
+    },
+    {
+      "round": 2,
+      "index": 93,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.4967,
+      "rideId": "d602d33d7f81ceedcc145d3a",
+      "driverId": "Ishaan"
+    },
+    {
+      "round": 2,
+      "index": 94,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.7935,
+      "rideId": "7219da799cdf06448d7d5577",
+      "driverId": "Ananya"
+    },
+    {
+      "round": 2,
+      "index": 95,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.2847,
+      "rideId": "70a05bbcc3f17d90ef86017e",
+      "driverId": "Meera"
+    },
+    {
+      "round": 2,
+      "index": 96,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 2.7369,
+      "rideId": "7a8eccd1acc7eb66a807d3e6",
+      "driverId": "Aarav"
+    },
+    {
+      "round": 2,
+      "index": 97,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.3485,
+      "rideId": "cf470e571493050697d0e799",
+      "driverId": "Dev"
+    },
+    {
+      "round": 2,
+      "index": 98,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.3139,
+      "rideId": "8484f72a6a6dd79c292807fe",
+      "driverId": "Zoya"
+    },
+    {
+      "round": 2,
+      "index": 99,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.3139,
+      "rideId": "91058002638417728a1ea8df",
+      "driverId": "Vikram"
+    },
+    {
+      "round": 3,
+      "index": 0,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 5.7041,
+      "rideId": "6e050bf4f1aef2538976e868",
+      "driverId": "Diya"
+    },
+    {
+      "round": 3,
+      "index": 1,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.0126,
+      "rideId": "62a97920866b91787892697a",
+      "driverId": "Ishaan"
+    },
+    {
+      "round": 3,
+      "index": 2,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 6.3249,
+      "rideId": "e9c746e4fca976ad6b66716d",
+      "driverId": "Zoya"
+    },
+    {
+      "round": 3,
+      "index": 3,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.6226,
+      "rideId": "7731b2cd46f6c278c3391d70",
+      "driverId": "Kabir"
+    },
+    {
+      "round": 3,
+      "index": 4,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.6226,
+      "rideId": "58e6557689d107451f5072d4",
+      "driverId": "Aarav"
+    },
+    {
+      "round": 3,
+      "index": 5,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 6.35,
+      "rideId": "d21bdbf142e20571c59a8c51",
+      "driverId": "Meera"
+    },
+    {
+      "round": 3,
+      "index": 6,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 4.6508,
+      "rideId": "c87195c13cc939036a0196ba",
+      "driverId": "Ananya"
+    },
+    {
+      "round": 3,
+      "index": 7,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 7.3666,
+      "rideId": "dbdd5da2dcf77115cbb0c89e",
+      "driverId": "Vikram"
+    },
+    {
+      "round": 3,
+      "index": 8,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 2.4761,
+      "rideId": "7f03ae749533f63224327329",
+      "driverId": "Neha"
+    },
+    {
+      "round": 3,
+      "index": 9,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 5.1676,
+      "rideId": "a197859472f89d7becb8ba40",
+      "driverId": "Dev"
+    },
+    {
+      "round": 3,
+      "index": 10,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 4.384,
+      "rideId": "e0928911ce353658ac0dd888",
+      "driverId": "Ishaan"
+    },
+    {
+      "round": 3,
+      "index": 11,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.8862,
+      "rideId": "936e55a3576e17f03031fda7",
+      "driverId": "Aarav"
+    },
+    {
+      "round": 3,
+      "index": 12,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 2.9293,
+      "rideId": "57de150cda8937b1e910b102",
+      "driverId": "Neha"
+    },
+    {
+      "round": 3,
+      "index": 13,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.0345,
+      "rideId": "d24f658e8a8ed3c60173668c",
+      "driverId": "Kabir"
+    },
+    {
+      "round": 3,
+      "index": 14,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.5522,
+      "rideId": "646426d31423de491dd5c4bc",
+      "driverId": "Ananya"
+    },
+    {
+      "round": 3,
+      "index": 15,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 2.9357,
+      "rideId": "12e4975e0dc910bfa2a50b47",
+      "driverId": "Ishaan"
+    },
+    {
+      "round": 3,
+      "index": 16,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 2.9066,
+      "rideId": "ed88d92072f1cc824eb948e2",
+      "driverId": "Zoya"
+    },
+    {
+      "round": 3,
+      "index": 17,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.4456,
+      "rideId": "bb3bbf11a6cf6957e8a29a11",
+      "driverId": "Dev"
+    },
+    {
+      "round": 3,
+      "index": 18,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.4083,
+      "rideId": "f90684a8a35ab0fd78be1861",
+      "driverId": "Rohan"
+    },
+    {
+      "round": 3,
+      "index": 19,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 2.787,
+      "rideId": "5a189150d18b56c96572ce87",
+      "driverId": "Aarav"
+    },
+    {
+      "round": 3,
+      "index": 20,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.1845,
+      "rideId": "1a1198b2380c69b0ba793bdb",
+      "driverId": "Neha"
+    },
+    {
+      "round": 3,
+      "index": 21,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 4.8877,
+      "rideId": "7ce4d1644f669f96826de11c",
+      "driverId": "Ishaan"
+    },
+    {
+      "round": 3,
+      "index": 22,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 4.797,
+      "rideId": "a39de69b67a6fd879e40411d",
+      "driverId": "Aarav"
+    },
+    {
+      "round": 3,
+      "index": 23,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 4.7086,
+      "rideId": "624b70a073811e502dee79d7",
+      "driverId": "Kabir"
+    },
+    {
+      "round": 3,
+      "index": 24,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.8318,
+      "rideId": "62a74b46f7d8ef938c1f35ca",
+      "driverId": "Neha"
+    },
+    {
+      "round": 3,
+      "index": 25,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.8409,
+      "rideId": "d3d1a4303992cb661e078285",
+      "driverId": "Ananya"
+    },
+    {
+      "round": 3,
+      "index": 26,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.9304,
+      "rideId": "06670fe2b5df54be5583216b",
+      "driverId": "Dev"
+    },
+    {
+      "round": 3,
+      "index": 27,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 2.93,
+      "rideId": "5bd272b03e930fd1fbd6b8d7",
+      "driverId": "Rohan"
+    },
+    {
+      "round": 3,
+      "index": 28,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.6621,
+      "rideId": "6706363ce7a972a6389d50ad",
+      "driverId": "Zoya"
+    },
+    {
+      "round": 3,
+      "index": 29,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.1446,
+      "rideId": "7fbb333de13722e389d1d02e",
+      "driverId": "Ishaan"
+    },
+    {
+      "round": 3,
+      "index": 30,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.0198,
+      "rideId": "0ab02259631875f62f7d8913",
+      "driverId": "Aarav"
+    },
+    {
+      "round": 3,
+      "index": 31,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.0288,
+      "rideId": "6575797d02464ec5aa256568",
+      "driverId": "Neha"
+    },
+    {
+      "round": 3,
+      "index": 32,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.6028,
+      "rideId": "38e75d8802476233d561f206",
+      "driverId": "Kabir"
+    },
+    {
+      "round": 3,
+      "index": 33,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 2.9909,
+      "rideId": "b1e5ce30e5878fa0c6df079a",
+      "driverId": "Dev"
+    },
+    {
+      "round": 3,
+      "index": 34,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.5522,
+      "rideId": "d3647a62d89d94b41cf0719a",
+      "driverId": "Ishaan"
+    },
+    {
+      "round": 3,
+      "index": 35,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 2.8524,
+      "rideId": "b06be1e52bcea6080e035e68",
+      "driverId": "Ananya"
+    },
+    {
+      "round": 3,
+      "index": 36,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 2.8524,
+      "rideId": "8e15aaa562e5ed6f6594be2d",
+      "driverId": "Aarav"
+    },
+    {
+      "round": 3,
+      "index": 37,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 2.7707,
+      "rideId": "9df8b4875a1e9b19159a8b1e",
+      "driverId": "Zoya"
+    },
+    {
+      "round": 3,
+      "index": 38,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 2.7734,
+      "rideId": "c013909e896cd06db138e86e",
+      "driverId": "Rohan"
+    },
+    {
+      "round": 3,
+      "index": 39,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.2899,
+      "rideId": "d2a95800eb14184b9d77a2f2",
+      "driverId": "Neha"
+    },
+    {
+      "round": 3,
+      "index": 40,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.2524,
+      "rideId": "48c03a4bc30985260003678d",
+      "driverId": "Kabir"
+    },
+    {
+      "round": 3,
+      "index": 41,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 2.789,
+      "rideId": "340621966a2e2033bb7017c7",
+      "driverId": "Ishaan"
+    },
+    {
+      "round": 3,
+      "index": 42,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.9011,
+      "rideId": "82981c2ad5d65a8d47a9421b",
+      "driverId": "Aarav"
+    },
+    {
+      "round": 3,
+      "index": 43,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.9746,
+      "rideId": "a7c75d9b53aaed0680dd8242",
+      "driverId": "Neha"
+    },
+    {
+      "round": 3,
+      "index": 44,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.9746,
+      "rideId": "88831b529b421da5d4520da6",
+      "driverId": "Ananya"
+    },
+    {
+      "round": 3,
+      "index": 45,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 4.4788,
+      "rideId": "dfcd608a28b80808980e6f06",
+      "driverId": "Zoya"
+    },
+    {
+      "round": 3,
+      "index": 46,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 4.3849,
+      "rideId": "511d11b8d78e7c2ace412795",
+      "driverId": "Kabir"
+    },
+    {
+      "round": 3,
+      "index": 47,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 4.3849,
+      "rideId": "ddb55ef0348b1ce5abc4bdf3",
+      "driverId": "Dev"
+    },
+    {
+      "round": 3,
+      "index": 48,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.8691,
+      "rideId": "39a7dbe416b46ecc7fb6c2c1",
+      "driverId": "Rohan"
+    },
+    {
+      "round": 3,
+      "index": 49,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.3928,
+      "rideId": "ef5ac084cfa205fd035a1fb9",
+      "driverId": "Ishaan"
+    },
+    {
+      "round": 3,
+      "index": 50,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 2.8135,
+      "rideId": "d0861af599c936cf8e539d2b",
+      "driverId": "Aarav"
+    },
+    {
+      "round": 3,
+      "index": 51,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.0221,
+      "rideId": "62e7399ace33acd2150f0ec3",
+      "driverId": "Neha"
+    },
+    {
+      "round": 3,
+      "index": 52,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.0336,
+      "rideId": "fa859b83a99dfa01969fd0e0",
+      "driverId": "Kabir"
+    },
+    {
+      "round": 3,
+      "index": 53,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 2.4475,
+      "rideId": "0e969f395107f3104a731ee6",
+      "driverId": "Ishaan"
+    },
+    {
+      "round": 3,
+      "index": 54,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.0067,
+      "rideId": "97cc7f6f7fb99a00ecec40b2",
+      "driverId": "Dev"
+    },
+    {
+      "round": 3,
+      "index": 55,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.0338,
+      "rideId": "1b0f42882644d0963dcfc693",
+      "driverId": "Ananya"
+    },
+    {
+      "round": 3,
+      "index": 56,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 5.5771,
+      "rideId": "6ec78102325cd942092c738d",
+      "driverId": "Zoya"
+    },
+    {
+      "round": 3,
+      "index": 57,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 2.9519,
+      "rideId": "89d3f33c30c5f1776db2b649",
+      "driverId": "Aarav"
+    },
+    {
+      "round": 3,
+      "index": 58,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 2.9519,
+      "rideId": "396cda82f97a6661df36b147",
+      "driverId": "Rohan"
+    },
+    {
+      "round": 3,
+      "index": 59,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 2.4037,
+      "rideId": "e87cd0b58cbfa328ce2e1391",
+      "driverId": "Vikram"
+    },
+    {
+      "round": 3,
+      "index": 60,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.1605,
+      "rideId": "08138f4423af984b9294a2b9",
+      "driverId": "Ishaan"
+    },
+    {
+      "round": 3,
+      "index": 61,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 4.1249,
+      "rideId": "3f513bd8cea369f8d6040cc0",
+      "driverId": "Neha"
+    },
+    {
+      "round": 3,
+      "index": 62,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.4244,
+      "rideId": "b4704cd6fb095d008af8f2ee",
+      "driverId": "Aarav"
+    },
+    {
+      "round": 3,
+      "index": 63,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.3305,
+      "rideId": "5b8ae96f0717d0826a138526",
+      "driverId": "Kabir"
+    },
+    {
+      "round": 3,
+      "index": 64,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.8629,
+      "rideId": "ee1861d7743dc0609ceb69cc",
+      "driverId": "Ananya"
+    },
+    {
+      "round": 3,
+      "index": 65,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.8004,
+      "rideId": "88ffd757b49c6b6405ab5c76",
+      "driverId": "Meera"
+    },
+    {
+      "round": 3,
+      "index": 66,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.37,
+      "rideId": "b0d16b04e05b2f46b9ec7f1b",
+      "driverId": "Zoya"
+    },
+    {
+      "round": 3,
+      "index": 67,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.3641,
+      "rideId": "fc873db2baac437575dd9b10",
+      "driverId": "Ishaan"
+    },
+    {
+      "round": 3,
+      "index": 68,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 4.0186,
+      "rideId": "e50f400b4624d398fdfc596f",
+      "driverId": "Neha"
+    },
+    {
+      "round": 3,
+      "index": 69,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 4.8723,
+      "rideId": "7fbdb5cbf109a55cab24f067",
+      "driverId": "Aarav"
+    },
+    {
+      "round": 3,
+      "index": 70,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 4.8451,
+      "rideId": "9f9e131e7038073c2bebb129",
+      "driverId": "Ananya"
+    },
+    {
+      "round": 3,
+      "index": 71,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 4.832,
+      "rideId": "77cdedd106629a0fb9ed6dd9",
+      "driverId": "Kabir"
+    },
+    {
+      "round": 3,
+      "index": 72,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 4.4327,
+      "rideId": "45e347db0d7733ad8165a454",
+      "driverId": "Zoya"
+    },
+    {
+      "round": 3,
+      "index": 73,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.5574,
+      "rideId": "bda933613a4b9b2ffece61ec",
+      "driverId": "Ishaan"
+    },
+    {
+      "round": 3,
+      "index": 74,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.607,
+      "rideId": "f28cc816d69a455e8dcd5d0f",
+      "driverId": "Neha"
+    },
+    {
+      "round": 3,
+      "index": 75,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 2.9502,
+      "rideId": "4471878ee21e3c8156823512",
+      "driverId": "Dev"
+    },
+    {
+      "round": 3,
+      "index": 76,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 2.9497,
+      "rideId": "6e28c6ebf242b04a3f675ca3",
+      "driverId": "Aarav"
+    },
+    {
+      "round": 3,
+      "index": 77,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 2.9413,
+      "rideId": "a26ad18dd12b22082da4eb84",
+      "driverId": "Ananya"
+    },
+    {
+      "round": 3,
+      "index": 78,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 2.8931,
+      "rideId": "1a9717535f29cfa78a40ad16",
+      "driverId": "Kabir"
+    },
+    {
+      "round": 3,
+      "index": 79,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 2.8855,
+      "rideId": "7ffea5850b947f2246e209b9",
+      "driverId": "Ishaan"
+    },
+    {
+      "round": 3,
+      "index": 80,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 2.9029,
+      "rideId": "33931de9db24611f26c2890a",
+      "driverId": "Neha"
+    },
+    {
+      "round": 3,
+      "index": 81,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 2.8725,
+      "rideId": "b102664281d79adbc298474e",
+      "driverId": "Dev"
+    },
+    {
+      "round": 3,
+      "index": 82,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 2.9083,
+      "rideId": "533a4cfec25387c70f939752",
+      "driverId": "Aarav"
+    },
+    {
+      "round": 3,
+      "index": 83,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.0029,
+      "rideId": "1657b5b9e49e67657c48da50",
+      "driverId": "Rohan"
+    },
+    {
+      "round": 3,
+      "index": 84,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.141,
+      "rideId": "cfec4c88cf833e131c20706b",
+      "driverId": "Ananya"
+    },
+    {
+      "round": 3,
+      "index": 85,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.1944,
+      "rideId": "ec2d658fd39c8f7544f90ffd",
+      "driverId": "Ishaan"
+    },
+    {
+      "round": 3,
+      "index": 86,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.2316,
+      "rideId": "78b2e3ba3d057716c83cf197",
+      "driverId": "Kabir"
+    },
+    {
+      "round": 3,
+      "index": 87,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.2617,
+      "rideId": "0aa4ca4d64f6f989ed09d7b7",
+      "driverId": "Neha"
+    },
+    {
+      "round": 3,
+      "index": 88,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.1469,
+      "rideId": "8253cb8c41c576229738cd5b",
+      "driverId": "Aarav"
+    },
+    {
+      "round": 3,
+      "index": 89,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.0585,
+      "rideId": "c8754d1be9a51b9ff837dc12",
+      "driverId": "Dev"
+    },
+    {
+      "round": 3,
+      "index": 90,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.0436,
+      "rideId": "e2ef3e7cab839893ccb4c8a3",
+      "driverId": "Meera"
+    },
+    {
+      "round": 3,
+      "index": 91,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.0289,
+      "rideId": "14202b9bb5e756d23cb37531",
+      "driverId": "Ishaan"
+    },
+    {
+      "round": 3,
+      "index": 92,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 4.0911,
+      "rideId": "bbe9e0f3f8d52fc5beabeaef",
+      "driverId": "Kabir"
+    },
+    {
+      "round": 3,
+      "index": 93,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 4.6179,
+      "rideId": "0bb144d0abd64f0109b1e8b3",
+      "driverId": "Ananya"
+    },
+    {
+      "round": 3,
+      "index": 94,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.991,
+      "rideId": "5a933acf48b81ad8c63edd93",
+      "driverId": "Neha"
+    },
+    {
+      "round": 3,
+      "index": 95,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 4.0242,
+      "rideId": "5b3afd34780c268d3ef19c54",
+      "driverId": "Aarav"
+    },
+    {
+      "round": 3,
+      "index": 96,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.4542,
+      "rideId": "90733075fd3d62bbdc768a9b",
+      "driverId": "Dev"
+    },
+    {
+      "round": 3,
+      "index": 97,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.531,
+      "rideId": "da8acad9a0f7dad80c8f26f0",
+      "driverId": "Rohan"
+    },
+    {
+      "round": 3,
+      "index": 98,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 2.9188,
+      "rideId": "6c4cf5bb56749d99daa8c562",
+      "driverId": "Kabir"
+    },
+    {
+      "round": 3,
+      "index": 99,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 2.3245,
+      "rideId": "75abcf6b846ece3513a098b7",
+      "driverId": "Ishaan"
+    }
+  ]
+}

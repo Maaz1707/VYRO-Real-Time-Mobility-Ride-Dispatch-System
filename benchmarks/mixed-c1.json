@@ -1,0 +1,2466 @@
+{
+  "createdAt": "2026-11-21T07:06:16.8175131Z",
+  "version": "0.3.0",
+  "storage": "postgres",
+  "scenario": "mixed",
+  "concurrency": 1,
+  "rounds": 3,
+  "requestsPerRound": 100,
+  "warmupRequests": 10,
+  "fleetSize": 12,
+  "os": "windows",
+  "arch": "amd64",
+  "logicalCPUs": 4,
+  "goVersion": "go1.27.4",
+  "notes": "Closed-loop local HTTP experiment against the direct Go API, excluding Next.js. POST latency includes connection, response headers/body, and JSON decoding; cancellation, integrity snapshots, and warmup are excluded from individual POST samples. Percentiles include failed requests if any. Total experiment time includes cancellation and integrity snapshots. No requests-per-second capacity claim is made. Saturation retains reservations until round end; lifecycle cancels each assigned ride before that worker's next POST. Mixed demand uses every fifth pickup outside the original fleet radius. Existing history, logging, pool size, and cache state can affect results. This does not model real traffic, routing, or production capacity.",
+  "summary": {
+    "requests": 300,
+    "assigned": 36,
+    "noDriver": 264,
+    "errors": 0,
+    "cleanupErrors": 0,
+    "duplicateActiveAssignments": 0,
+    "p50Ms": 1.1308,
+    "p95Ms": 1.7808,
+    "p99Ms": 2.0241,
+    "elapsedSeconds": 0.4241158
+  },
+  "samples": [
+    {
+      "round": 1,
+      "index": 0,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.2327,
+      "rideId": "cebf6dc5c5be6f50dc7d91c1"
+    },
+    {
+      "round": 1,
+      "index": 1,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 1.1012,
+      "rideId": "86c79cd2149ee027558f5d26",
+      "driverId": "Neha"
+    },
+    {
+      "round": 1,
+      "index": 2,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 1.6211,
+      "rideId": "eccf2d94ba8235a433c04eee",
+      "driverId": "Aarav"
+    },
+    {
+      "round": 1,
+      "index": 3,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 1.0651,
+      "rideId": "05aa366b4149dbd3e4cedb12",
+      "driverId": "Kabir"
+    },
+    {
+      "round": 1,
+      "index": 4,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 1.6312,
+      "rideId": "601052d5adceecbda763129c",
+      "driverId": "Ishaan"
+    },
+    {
+      "round": 1,
+      "index": 5,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.1135,
+      "rideId": "34eb58d635b2351e0835cb26"
+    },
+    {
+      "round": 1,
+      "index": 6,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 1.5859,
+      "rideId": "ddd279578aac62147c187848",
+      "driverId": "Ananya"
+    },
+    {
+      "round": 1,
+      "index": 7,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 2.0079,
+      "rideId": "1f249d9b9f7efd2656dfadbf",
+      "driverId": "Zoya"
+    },
+    {
+      "round": 1,
+      "index": 8,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 1.6432,
+      "rideId": "c9c7c04300b0b1ddcd1e1474",
+      "driverId": "Dev"
+    },
+    {
+      "round": 1,
+      "index": 9,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 1.5848,
+      "rideId": "aab67d2adcab829227ff0b62",
+      "driverId": "Rohan"
+    },
+    {
+      "round": 1,
+      "index": 10,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.14,
+      "rideId": "d49cae5495ce22608d0a6089"
+    },
+    {
+      "round": 1,
+      "index": 11,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 1.8345,
+      "rideId": "4a015bc355dc2a1c891d7db9",
+      "driverId": "Meera"
+    },
+    {
+      "round": 1,
+      "index": 12,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 1.2239,
+      "rideId": "c65010c75965b0578191047a",
+      "driverId": "Diya"
+    },
+    {
+      "round": 1,
+      "index": 13,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 1.7656,
+      "rideId": "7346908fbd47ca81952d3326",
+      "driverId": "Arjun"
+    },
+    {
+      "round": 1,
+      "index": 14,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 1.0917,
+      "rideId": "e7a1c39f6963e97a13698122",
+      "driverId": "Vikram"
+    },
+    {
+      "round": 1,
+      "index": 15,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.154,
+      "rideId": "fe3a58d5a915f3a38d5d05db"
+    },
+    {
+      "round": 1,
+      "index": 16,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.5918,
+      "rideId": "77f2d3970c740f88820a0254"
+    },
+    {
+      "round": 1,
+      "index": 17,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.413,
+      "rideId": "8175ee5afe1811bfaecbd6ad"
+    },
+    {
+      "round": 1,
+      "index": 18,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.1218,
+      "rideId": "6cd8c25766ffaa5ef49a2e4c"
+    },
+    {
+      "round": 1,
+      "index": 19,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.3066,
+      "rideId": "7ad557dd84f4fae87ba5ae2e"
+    },
+    {
+      "round": 1,
+      "index": 20,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.2036,
+      "rideId": "8a09a74a6203675ea26aebc0"
+    },
+    {
+      "round": 1,
+      "index": 21,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.1421,
+      "rideId": "5fa8517443dc25d49138467d"
+    },
+    {
+      "round": 1,
+      "index": 22,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.071,
+      "rideId": "e6906ac59547538877f1e68d"
+    },
+    {
+      "round": 1,
+      "index": 23,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.1951,
+      "rideId": "9624f3e181f2c96cc6e3aa81"
+    },
+    {
+      "round": 1,
+      "index": 24,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.2297,
+      "rideId": "7da479832f405bf645785a8e"
+    },
+    {
+      "round": 1,
+      "index": 25,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.1063,
+      "rideId": "db3a8fd1946a5e4ea7113b29"
+    },
+    {
+      "round": 1,
+      "index": 26,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.1171,
+      "rideId": "86ef7221616ae6f2ef150270"
+    },
+    {
+      "round": 1,
+      "index": 27,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.1325,
+      "rideId": "dd6e531b1966a588e25abe80"
+    },
+    {
+      "round": 1,
+      "index": 28,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.0518,
+      "rideId": "6a9cc98ad4e0385abb59d0cb"
+    },
+    {
+      "round": 1,
+      "index": 29,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.1568,
+      "rideId": "df1c1e513d540655f8712d95"
+    },
+    {
+      "round": 1,
+      "index": 30,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 0.8953,
+      "rideId": "287859da15c780454988b5d5"
+    },
+    {
+      "round": 1,
+      "index": 31,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.7323,
+      "rideId": "50e20dfab195084efbeaac2a"
+    },
+    {
+      "round": 1,
+      "index": 32,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.8808,
+      "rideId": "de66d56b9ac34581fef5b398"
+    },
+    {
+      "round": 1,
+      "index": 33,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.1605,
+      "rideId": "0b5a95c4f2bad377108f11c7"
+    },
+    {
+      "round": 1,
+      "index": 34,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.0968,
+      "rideId": "2094bae83cd63fcb4aa39a5d"
+    },
+    {
+      "round": 1,
+      "index": 35,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.1569,
+      "rideId": "56f7bf6b1ae9d0c47f747544"
+    },
+    {
+      "round": 1,
+      "index": 36,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.0787,
+      "rideId": "b204c47b31e136f221aaaf25"
+    },
+    {
+      "round": 1,
+      "index": 37,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.127,
+      "rideId": "4b172280d5ec025bd91b7a4a"
+    },
+    {
+      "round": 1,
+      "index": 38,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 0.5229,
+      "rideId": "dbedc51820b9f6256908ea6e"
+    },
+    {
+      "round": 1,
+      "index": 39,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.0679,
+      "rideId": "906e38c3fef30b6e1b5fa051"
+    },
+    {
+      "round": 1,
+      "index": 40,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.2186,
+      "rideId": "0dfe7599c155528d9177dba2"
+    },
+    {
+      "round": 1,
+      "index": 41,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.0668,
+      "rideId": "f153247af73a9bcec8adb425"
+    },
+    {
+      "round": 1,
+      "index": 42,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.0736,
+      "rideId": "8a12ed9d69ebcc2e74b5b438"
+    },
+    {
+      "round": 1,
+      "index": 43,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.1882,
+      "rideId": "5ab00a448e5c301f7b7cbf2e"
+    },
+    {
+      "round": 1,
+      "index": 44,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.0423,
+      "rideId": "3b7f9a3d1fe28de35d006ccc"
+    },
+    {
+      "round": 1,
+      "index": 45,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.3946,
+      "rideId": "790202c063cea965d6c5fa0c"
+    },
+    {
+      "round": 1,
+      "index": 46,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.7707,
+      "rideId": "da628659ba075a4d79e16974"
+    },
+    {
+      "round": 1,
+      "index": 47,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.1088,
+      "rideId": "5eefc22f6abc41810dde7e70"
+    },
+    {
+      "round": 1,
+      "index": 48,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.0742,
+      "rideId": "cfacced5a28d7af700b982dc"
+    },
+    {
+      "round": 1,
+      "index": 49,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.183,
+      "rideId": "a8a820f6b3fa7d4be88e6bef"
+    },
+    {
+      "round": 1,
+      "index": 50,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.2447,
+      "rideId": "9b162d72b5fd94394397a924"
+    },
+    {
+      "round": 1,
+      "index": 51,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.0509,
+      "rideId": "fdc44fefd772187d9c8a971b"
+    },
+    {
+      "round": 1,
+      "index": 52,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.1557,
+      "rideId": "c2dba2547276ae7f1351d0d2"
+    },
+    {
+      "round": 1,
+      "index": 53,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.1232,
+      "rideId": "af6acee4bf444f1a5cda940c"
+    },
+    {
+      "round": 1,
+      "index": 54,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.1201,
+      "rideId": "a15b761268a9a0c5afd395ff"
+    },
+    {
+      "round": 1,
+      "index": 55,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.1213,
+      "rideId": "ada85e89fa2a0a41c49d78dd"
+    },
+    {
+      "round": 1,
+      "index": 56,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 2.0241,
+      "rideId": "53440476073809259e90b15b"
+    },
+    {
+      "round": 1,
+      "index": 57,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.4401,
+      "rideId": "ea55243bb1a5ce172dcc323e"
+    },
+    {
+      "round": 1,
+      "index": 58,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 2.2185,
+      "rideId": "77dea12e896c29559af804c0"
+    },
+    {
+      "round": 1,
+      "index": 59,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.7145,
+      "rideId": "1ec6467862f7dae20450f9e9"
+    },
+    {
+      "round": 1,
+      "index": 60,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.1279,
+      "rideId": "5343242286ce8a6a72bf0abd"
+    },
+    {
+      "round": 1,
+      "index": 61,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.21,
+      "rideId": "50f4b178b8cc417112e8f1f6"
+    },
+    {
+      "round": 1,
+      "index": 62,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.1345,
+      "rideId": "770a79db8d0b32b727f91427"
+    },
+    {
+      "round": 1,
+      "index": 63,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.6619,
+      "rideId": "07eb40ce1e26c2971fe909ff"
+    },
+    {
+      "round": 1,
+      "index": 64,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.6192,
+      "rideId": "f86488cf36fec95729d6bc6c"
+    },
+    {
+      "round": 1,
+      "index": 65,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.164,
+      "rideId": "c31d06fa84100743c5cf7315"
+    },
+    {
+      "round": 1,
+      "index": 66,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 2.4611,
+      "rideId": "480c6535678ff4044ccf69b8"
+    },
+    {
+      "round": 1,
+      "index": 67,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.0507,
+      "rideId": "80e9b105d122cb41324684ea"
+    },
+    {
+      "round": 1,
+      "index": 68,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.9569,
+      "rideId": "e97f6b6a411832821a56e71a"
+    },
+    {
+      "round": 1,
+      "index": 69,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.0825,
+      "rideId": "5a200c9261d903e170e06ccc"
+    },
+    {
+      "round": 1,
+      "index": 70,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.0856,
+      "rideId": "4f69a5a2590809180751ac97"
+    },
+    {
+      "round": 1,
+      "index": 71,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.852,
+      "rideId": "703ff9feda25282b23450b80"
+    },
+    {
+      "round": 1,
+      "index": 72,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.0688,
+      "rideId": "4df408ade17d1790d0008c5d"
+    },
+    {
+      "round": 1,
+      "index": 73,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.1743,
+      "rideId": "ba74ce43c7ceab171ca7b60e"
+    },
+    {
+      "round": 1,
+      "index": 74,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.1535,
+      "rideId": "40c0bc5e648a4e05b666b102"
+    },
+    {
+      "round": 1,
+      "index": 75,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.1774,
+      "rideId": "ba17b50d9a812ed7ea29ec10"
+    },
+    {
+      "round": 1,
+      "index": 76,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.0823,
+      "rideId": "4c5a2cba5ba87dee43fdbf51"
+    },
+    {
+      "round": 1,
+      "index": 77,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.2929,
+      "rideId": "e7c34ed29dee55bd4ab8766c"
+    },
+    {
+      "round": 1,
+      "index": 78,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.3194,
+      "rideId": "7217196742ed7ff4258c72ed"
+    },
+    {
+      "round": 1,
+      "index": 79,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.2394,
+      "rideId": "420b1d96a77ec12bbafeb5df"
+    },
+    {
+      "round": 1,
+      "index": 80,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.2259,
+      "rideId": "411d140527b2e42212a25d95"
+    },
+    {
+      "round": 1,
+      "index": 81,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.7499,
+      "rideId": "1b60da83529f6df822d3f723"
+    },
+    {
+      "round": 1,
+      "index": 82,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.6074,
+      "rideId": "49dc3e2786b063d83ad9c9f6"
+    },
+    {
+      "round": 1,
+      "index": 83,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.1596,
+      "rideId": "48f8a4cf888348f688629f4c"
+    },
+    {
+      "round": 1,
+      "index": 84,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.3393,
+      "rideId": "69779a9a747bda030b848e86"
+    },
+    {
+      "round": 1,
+      "index": 85,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.2527,
+      "rideId": "ad2e2511e59928536eefdfd6"
+    },
+    {
+      "round": 1,
+      "index": 86,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.3163,
+      "rideId": "3b6836582d36bc9a7fdb071e"
+    },
+    {
+      "round": 1,
+      "index": 87,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.2569,
+      "rideId": "28553414710e4ebbfcbabb75"
+    },
+    {
+      "round": 1,
+      "index": 88,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.2729,
+      "rideId": "b0069e97d5b328846f1c409f"
+    },
+    {
+      "round": 1,
+      "index": 89,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.7462,
+      "rideId": "c139225a05d70ad32d8c3852"
+    },
+    {
+      "round": 1,
+      "index": 90,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.0773,
+      "rideId": "99130a3afb3d195834661341"
+    },
+    {
+      "round": 1,
+      "index": 91,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.727,
+      "rideId": "fb68cb0fdce1c16dab7e3dbf"
+    },
+    {
+      "round": 1,
+      "index": 92,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.0567,
+      "rideId": "2b7f98d0f5d2dd7adc322e19"
+    },
+    {
+      "round": 1,
+      "index": 93,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.1928,
+      "rideId": "42c702c9ffd2d06af7cb67ea"
+    },
+    {
+      "round": 1,
+      "index": 94,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.146,
+      "rideId": "8391cecab3e4f3056962e1f3"
+    },
+    {
+      "round": 1,
+      "index": 95,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.7905,
+      "rideId": "53d979176a855b1c867d97fa"
+    },
+    {
+      "round": 1,
+      "index": 96,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.1101,
+      "rideId": "898c178f55bd08097eb934b3"
+    },
+    {
+      "round": 1,
+      "index": 97,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 0.512,
+      "rideId": "b25ed65d83a7905afcf77297"
+    },
+    {
+      "round": 1,
+      "index": 98,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.0591,
+      "rideId": "614bf5eb84eb53a023b0308e"
+    },
+    {
+      "round": 1,
+      "index": 99,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.2472,
+      "rideId": "053e74204d2bf1cdcd0a8c57"
+    },
+    {
+      "round": 2,
+      "index": 0,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.2773,
+      "rideId": "135f9fcf3ee2354e0c13736f"
+    },
+    {
+      "round": 2,
+      "index": 1,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 1.92,
+      "rideId": "cd121b8cb339fdda3f5e42f5",
+      "driverId": "Neha"
+    },
+    {
+      "round": 2,
+      "index": 2,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 1.0997,
+      "rideId": "d88d8a0370eb72603415f186",
+      "driverId": "Aarav"
+    },
+    {
+      "round": 2,
+      "index": 3,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 1.7329,
+      "rideId": "30688b793f3801852a1f4a25",
+      "driverId": "Kabir"
+    },
+    {
+      "round": 2,
+      "index": 4,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 1.1602,
+      "rideId": "85973dc39e974fadb823e81e",
+      "driverId": "Ishaan"
+    },
+    {
+      "round": 2,
+      "index": 5,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.0581,
+      "rideId": "b7ee552a63533b8ca879ec2a"
+    },
+    {
+      "round": 2,
+      "index": 6,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 1.6193,
+      "rideId": "f498970ae4580e24857f3aed",
+      "driverId": "Ananya"
+    },
+    {
+      "round": 2,
+      "index": 7,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 1.098,
+      "rideId": "d2ffbdc9be0563731b1b9dd2",
+      "driverId": "Zoya"
+    },
+    {
+      "round": 2,
+      "index": 8,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 1.7922,
+      "rideId": "5de3e49fd5cf11550292068b",
+      "driverId": "Dev"
+    },
+    {
+      "round": 2,
+      "index": 9,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 3.2281,
+      "rideId": "10d799ec0bef1677c2ed6eb9",
+      "driverId": "Rohan"
+    },
+    {
+      "round": 2,
+      "index": 10,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.1243,
+      "rideId": "f8e228f018f4de9f51ae1cc8"
+    },
+    {
+      "round": 2,
+      "index": 11,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 1.575,
+      "rideId": "6b4ad3d420c6723a02ccc20f",
+      "driverId": "Meera"
+    },
+    {
+      "round": 2,
+      "index": 12,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 0.5212,
+      "rideId": "6978dae234569fd3c4311ec8",
+      "driverId": "Diya"
+    },
+    {
+      "round": 2,
+      "index": 13,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 1.7636,
+      "rideId": "cf597f0f93206b5b349b54ab",
+      "driverId": "Arjun"
+    },
+    {
+      "round": 2,
+      "index": 14,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 0.5213,
+      "rideId": "63edf5bbacccad13af30a910",
+      "driverId": "Vikram"
+    },
+    {
+      "round": 2,
+      "index": 15,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.155,
+      "rideId": "d52bf7e406dff82d761a439a"
+    },
+    {
+      "round": 2,
+      "index": 16,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.1114,
+      "rideId": "c1d21706c2b56c74ec75be0f"
+    },
+    {
+      "round": 2,
+      "index": 17,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 0.5391,
+      "rideId": "06dbe29eca7ad3911844550b"
+    },
+    {
+      "round": 2,
+      "index": 18,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.0741,
+      "rideId": "ace1d0557e52264f86c7278f"
+    },
+    {
+      "round": 2,
+      "index": 19,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.0364,
+      "rideId": "b419ab44f4923701cee134b8"
+    },
+    {
+      "round": 2,
+      "index": 20,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 0.5168,
+      "rideId": "51f9a4bf596d94c3559a8321"
+    },
+    {
+      "round": 2,
+      "index": 21,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.2765,
+      "rideId": "b96b3296f8f5bced914a699a"
+    },
+    {
+      "round": 2,
+      "index": 22,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.1118,
+      "rideId": "8afc95ea46080b1f5358c8b2"
+    },
+    {
+      "round": 2,
+      "index": 23,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.752,
+      "rideId": "0126348ea0446e2a8a7634c1"
+    },
+    {
+      "round": 2,
+      "index": 24,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.2378,
+      "rideId": "58fefebdfe03233dbc4e36de"
+    },
+    {
+      "round": 2,
+      "index": 25,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.0979,
+      "rideId": "ea3db4419124fd846e93946e"
+    },
+    {
+      "round": 2,
+      "index": 26,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 0.5205,
+      "rideId": "3dc94b9d784009c213e33827"
+    },
+    {
+      "round": 2,
+      "index": 27,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.0584,
+      "rideId": "2f40aaf1c4bdf36073ea3803"
+    },
+    {
+      "round": 2,
+      "index": 28,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.124,
+      "rideId": "761399229b8fb5746e248762"
+    },
+    {
+      "round": 2,
+      "index": 29,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 0.5438,
+      "rideId": "1dab7313b5418fbeb2f5d8e0"
+    },
+    {
+      "round": 2,
+      "index": 30,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.2003,
+      "rideId": "062205fbb580c9905f87212c"
+    },
+    {
+      "round": 2,
+      "index": 31,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 0.5248,
+      "rideId": "6be434bc067911caf3fe173c"
+    },
+    {
+      "round": 2,
+      "index": 32,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 0.5267,
+      "rideId": "a1b9038abc62b33fad607f99"
+    },
+    {
+      "round": 2,
+      "index": 33,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.1553,
+      "rideId": "16783c179845b73a8225041a"
+    },
+    {
+      "round": 2,
+      "index": 34,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 0.5211,
+      "rideId": "d217d7228e62607e94a91b86"
+    },
+    {
+      "round": 2,
+      "index": 35,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.0663,
+      "rideId": "139000733f6d26b882285945"
+    },
+    {
+      "round": 2,
+      "index": 36,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.2449,
+      "rideId": "045d5f1efb746241a3345a66"
+    },
+    {
+      "round": 2,
+      "index": 37,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.1654,
+      "rideId": "3fd8655d168d555431c1be8a"
+    },
+    {
+      "round": 2,
+      "index": 38,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.089,
+      "rideId": "373106675934356f0ee716a9"
+    },
+    {
+      "round": 2,
+      "index": 39,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 0.8451,
+      "rideId": "1342a03bc126027da4c5ecc4"
+    },
+    {
+      "round": 2,
+      "index": 40,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.4601,
+      "rideId": "e63c2e15e6ebddea74df4b2d"
+    },
+    {
+      "round": 2,
+      "index": 41,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.233,
+      "rideId": "10e568e774e90c920529dfa2"
+    },
+    {
+      "round": 2,
+      "index": 42,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.1115,
+      "rideId": "3acd7fac669df7b051e53fb8"
+    },
+    {
+      "round": 2,
+      "index": 43,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.0448,
+      "rideId": "43c13c646cba74734f091afd"
+    },
+    {
+      "round": 2,
+      "index": 44,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 0.5401,
+      "rideId": "01f6bf9c1728b9e812cc2373"
+    },
+    {
+      "round": 2,
+      "index": 45,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.066,
+      "rideId": "eeb74c6b6de374b27958464c"
+    },
+    {
+      "round": 2,
+      "index": 46,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.2105,
+      "rideId": "8216fa98c8194c5a4b03deaf"
+    },
+    {
+      "round": 2,
+      "index": 47,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 0.5339,
+      "rideId": "11f5436052358ca4642a6df6"
+    },
+    {
+      "round": 2,
+      "index": 48,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.1623,
+      "rideId": "92241e79c6586a71a4567a4e"
+    },
+    {
+      "round": 2,
+      "index": 49,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 0.5158,
+      "rideId": "7b4a01637a322149849e9a31"
+    },
+    {
+      "round": 2,
+      "index": 50,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.1618,
+      "rideId": "2a9d50c260537cc3173dd5bf"
+    },
+    {
+      "round": 2,
+      "index": 51,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 0.537,
+      "rideId": "9c66cfdc72d3b3c4797ec3ef"
+    },
+    {
+      "round": 2,
+      "index": 52,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.1512,
+      "rideId": "93b3e6b4ca6e4fa99e74f29f"
+    },
+    {
+      "round": 2,
+      "index": 53,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 0.5289,
+      "rideId": "0e4b7be3342dec071039acc3"
+    },
+    {
+      "round": 2,
+      "index": 54,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.0938,
+      "rideId": "ef6223707651ed411cc4ae2c"
+    },
+    {
+      "round": 2,
+      "index": 55,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.0721,
+      "rideId": "f82fe3108c17370a527d9b20"
+    },
+    {
+      "round": 2,
+      "index": 56,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 0.5195,
+      "rideId": "2b8c8cf7f950dc6202b04129"
+    },
+    {
+      "round": 2,
+      "index": 57,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.1935,
+      "rideId": "159b6fcd812bd206f8d42b2c"
+    },
+    {
+      "round": 2,
+      "index": 58,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.7998,
+      "rideId": "6ab14d6df3451840f5f38d2e"
+    },
+    {
+      "round": 2,
+      "index": 59,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 0.5355,
+      "rideId": "e3d369cd0043149871a0abfb"
+    },
+    {
+      "round": 2,
+      "index": 60,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.1699,
+      "rideId": "d3a2e5a7ef93efdbfbb4f102"
+    },
+    {
+      "round": 2,
+      "index": 61,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.1369,
+      "rideId": "7ba8ff43198c526079db5708"
+    },
+    {
+      "round": 2,
+      "index": 62,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 0.5137,
+      "rideId": "dc62125363bf3045998d7364"
+    },
+    {
+      "round": 2,
+      "index": 63,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.167,
+      "rideId": "d0779981f15d057b04d3539f"
+    },
+    {
+      "round": 2,
+      "index": 64,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 0.5166,
+      "rideId": "9578d45165abb195e7b8bc25"
+    },
+    {
+      "round": 2,
+      "index": 65,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.2353,
+      "rideId": "fe345fa6f9a93f8cb7a86e2f"
+    },
+    {
+      "round": 2,
+      "index": 66,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 0.5155,
+      "rideId": "044a921e350534a3f715c45b"
+    },
+    {
+      "round": 2,
+      "index": 67,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.2732,
+      "rideId": "20dd9570cff50f9416311d21"
+    },
+    {
+      "round": 2,
+      "index": 68,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.039,
+      "rideId": "54b2eb2f6f4bec44f8c97241"
+    },
+    {
+      "round": 2,
+      "index": 69,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.0714,
+      "rideId": "b6577c64ad55a9979fdd4e47"
+    },
+    {
+      "round": 2,
+      "index": 70,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.0738,
+      "rideId": "45db61a46a9a1427dfcf1057"
+    },
+    {
+      "round": 2,
+      "index": 71,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 0.5288,
+      "rideId": "46b61808149a2896367f8523"
+    },
+    {
+      "round": 2,
+      "index": 72,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.1925,
+      "rideId": "909c122e8bfa8c3c0fd2b687"
+    },
+    {
+      "round": 2,
+      "index": 73,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 0.5337,
+      "rideId": "33fb3b75a755d0829a0edf40"
+    },
+    {
+      "round": 2,
+      "index": 74,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.4828,
+      "rideId": "7534aa5d5738168f336482fa"
+    },
+    {
+      "round": 2,
+      "index": 75,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.3967,
+      "rideId": "7ebb9eb0ff7443844bd484c7"
+    },
+    {
+      "round": 2,
+      "index": 76,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.0566,
+      "rideId": "c5ff2cc3aae92b6fca19691d"
+    },
+    {
+      "round": 2,
+      "index": 77,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.1781,
+      "rideId": "3f0c02d9bc773866b1c9d49b"
+    },
+    {
+      "round": 2,
+      "index": 78,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.161,
+      "rideId": "99f5273780728dd01d14473b"
+    },
+    {
+      "round": 2,
+      "index": 79,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.076,
+      "rideId": "feed6d94354ec4b8604cf17a"
+    },
+    {
+      "round": 2,
+      "index": 80,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 0.5335,
+      "rideId": "8f298e067ab8c729ce1838e2"
+    },
+    {
+      "round": 2,
+      "index": 81,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.0411,
+      "rideId": "41134cf162c0a65e256d8384"
+    },
+    {
+      "round": 2,
+      "index": 82,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.0426,
+      "rideId": "b66c2706a211aa4cb3b43957"
+    },
+    {
+      "round": 2,
+      "index": 83,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 0.5127,
+      "rideId": "c8ad62dfe0ad8b3847a6b8f5"
+    },
+    {
+      "round": 2,
+      "index": 84,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.1788,
+      "rideId": "f8b11af9dc4464f08d670a18"
+    },
+    {
+      "round": 2,
+      "index": 85,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 0.5274,
+      "rideId": "6ae51ea7f3c32fead4accf30"
+    },
+    {
+      "round": 2,
+      "index": 86,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.176,
+      "rideId": "b7716a455abf7135998fe715"
+    },
+    {
+      "round": 2,
+      "index": 87,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 0.5151,
+      "rideId": "87c88ae1d897aabbf949ca1e"
+    },
+    {
+      "round": 2,
+      "index": 88,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.1665,
+      "rideId": "2bbf427e106001f036897c50"
+    },
+    {
+      "round": 2,
+      "index": 89,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 0.5343,
+      "rideId": "2af69b76c08234039a86cf25"
+    },
+    {
+      "round": 2,
+      "index": 90,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.1859,
+      "rideId": "5b9c680f3d957db41848751c"
+    },
+    {
+      "round": 2,
+      "index": 91,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 0.6251,
+      "rideId": "1c3c705ac79d705a15a3af7b"
+    },
+    {
+      "round": 2,
+      "index": 92,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.7808,
+      "rideId": "45d361a3730235ed5417dd01"
+    },
+    {
+      "round": 2,
+      "index": 93,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.0504,
+      "rideId": "f463f107448bc901c4ddbb7c"
+    },
+    {
+      "round": 2,
+      "index": 94,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.1396,
+      "rideId": "6899a1e9bfe507c348c0f3ba"
+    },
+    {
+      "round": 2,
+      "index": 95,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.0477,
+      "rideId": "9f5b848913535153738f5d33"
+    },
+    {
+      "round": 2,
+      "index": 96,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 0.5209,
+      "rideId": "27788875c7fea5d827e5f3a4"
+    },
+    {
+      "round": 2,
+      "index": 97,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.2023,
+      "rideId": "dade0f538bbe21a086710826"
+    },
+    {
+      "round": 2,
+      "index": 98,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 0.5147,
+      "rideId": "8c1629e2637888ab93512098"
+    },
+    {
+      "round": 2,
+      "index": 99,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.1543,
+      "rideId": "3a6431b25a2553fe02c37686"
+    },
+    {
+      "round": 3,
+      "index": 0,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.0474,
+      "rideId": "a102d41e225fada003428d64"
+    },
+    {
+      "round": 3,
+      "index": 1,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 1.4111,
+      "rideId": "b7c3d62b0b799a088606890b",
+      "driverId": "Neha"
+    },
+    {
+      "round": 3,
+      "index": 2,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 1.1989,
+      "rideId": "e3da50a3d828c0b7b6bb8201",
+      "driverId": "Aarav"
+    },
+    {
+      "round": 3,
+      "index": 3,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 1.0597,
+      "rideId": "8a35a535fe11eed929c9bae0",
+      "driverId": "Kabir"
+    },
+    {
+      "round": 3,
+      "index": 4,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 1.3293,
+      "rideId": "9fd6b43e1d8b9cb88b71f125",
+      "driverId": "Ishaan"
+    },
+    {
+      "round": 3,
+      "index": 5,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.0479,
+      "rideId": "6087e4921ac7175faebcf309"
+    },
+    {
+      "round": 3,
+      "index": 6,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 1.0697,
+      "rideId": "4c5c95dfd9774dd014e44298",
+      "driverId": "Ananya"
+    },
+    {
+      "round": 3,
+      "index": 7,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 1.0559,
+      "rideId": "0f9eedd8ee0bc1e4c50eae2d",
+      "driverId": "Zoya"
+    },
+    {
+      "round": 3,
+      "index": 8,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 1.0297,
+      "rideId": "1d091c762569db3d105a8772",
+      "driverId": "Dev"
+    },
+    {
+      "round": 3,
+      "index": 9,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 0.5137,
+      "rideId": "39e96d36f2640cfc8b5bad14",
+      "driverId": "Rohan"
+    },
+    {
+      "round": 3,
+      "index": 10,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.1979,
+      "rideId": "952c2aea16afefdd04aa78d1"
+    },
+    {
+      "round": 3,
+      "index": 11,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 1.1426,
+      "rideId": "a44bee39d4c514ca12770a2a",
+      "driverId": "Meera"
+    },
+    {
+      "round": 3,
+      "index": 12,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 1.1544,
+      "rideId": "dbef4d0d7b4effba9c9eb484",
+      "driverId": "Diya"
+    },
+    {
+      "round": 3,
+      "index": 13,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 1.6889,
+      "rideId": "cd75fbd2daeceb2896892ab6",
+      "driverId": "Arjun"
+    },
+    {
+      "round": 3,
+      "index": 14,
+      "httpStatus": 201,
+      "outcome": "assigned",
+      "latencyMs": 1.7167,
+      "rideId": "3b11fd110d67b06dd499d0a9",
+      "driverId": "Vikram"
+    },
+    {
+      "round": 3,
+      "index": 15,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.1551,
+      "rideId": "60db7d243b925347e8d7a9df"
+    },
+    {
+      "round": 3,
+      "index": 16,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 0.5193,
+      "rideId": "c4b000fe700ddeea4cf960b9"
+    },
+    {
+      "round": 3,
+      "index": 17,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.1703,
+      "rideId": "fbcab0b681aad2be7cb65014"
+    },
+    {
+      "round": 3,
+      "index": 18,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.2224,
+      "rideId": "550a206b7699f4d28160e491"
+    },
+    {
+      "round": 3,
+      "index": 19,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 0.5224,
+      "rideId": "f36c1b8beff97af10385649d"
+    },
+    {
+      "round": 3,
+      "index": 20,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.0651,
+      "rideId": "ac8c9b0512feac14063ffa1d"
+    },
+    {
+      "round": 3,
+      "index": 21,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 0.5233,
+      "rideId": "ee88aa805344a611b8e39287"
+    },
+    {
+      "round": 3,
+      "index": 22,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.6959,
+      "rideId": "428fb27549e3a3501ad15324"
+    },
+    {
+      "round": 3,
+      "index": 23,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.1584,
+      "rideId": "63a22ea2216fa13a7fe734d0"
+    },
+    {
+      "round": 3,
+      "index": 24,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.2767,
+      "rideId": "07c2f3c3a7ad29d3ca7c8bbb"
+    },
+    {
+      "round": 3,
+      "index": 25,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.1756,
+      "rideId": "d6859847f0fb87130bb53591"
+    },
+    {
+      "round": 3,
+      "index": 26,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.1259,
+      "rideId": "156c0614f1fa3a33bfed82b7"
+    },
+    {
+      "round": 3,
+      "index": 27,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.3823,
+      "rideId": "02f167776da6295d1a29aefc"
+    },
+    {
+      "round": 3,
+      "index": 28,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.9402,
+      "rideId": "3d31de8d9a930bbf17c80937"
+    },
+    {
+      "round": 3,
+      "index": 29,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.0843,
+      "rideId": "75d9f5f5f7c0428feed9fc19"
+    },
+    {
+      "round": 3,
+      "index": 30,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.3122,
+      "rideId": "37042197543ec5197447ed4b"
+    },
+    {
+      "round": 3,
+      "index": 31,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 0.5521,
+      "rideId": "613ff9398eac953139413f4f"
+    },
+    {
+      "round": 3,
+      "index": 32,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.2223,
+      "rideId": "20a53f67fa601f991072bb84"
+    },
+    {
+      "round": 3,
+      "index": 33,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.1328,
+      "rideId": "09ce6b68a8814acef44733ed"
+    },
+    {
+      "round": 3,
+      "index": 34,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 0.5258,
+      "rideId": "aae525c6a1a0c7b3c0738c60"
+    },
+    {
+      "round": 3,
+      "index": 35,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.1889,
+      "rideId": "b4942aa3e51728ccf42da75b"
+    },
+    {
+      "round": 3,
+      "index": 36,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 0.5169,
+      "rideId": "74a26d870a7c185bce7f7da1"
+    },
+    {
+      "round": 3,
+      "index": 37,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.1642,
+      "rideId": "48dccf26d4663b0f2623c13d"
+    },
+    {
+      "round": 3,
+      "index": 38,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 0.5247,
+      "rideId": "38d518733f979a0c5a84c17d"
+    },
+    {
+      "round": 3,
+      "index": 39,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.0535,
+      "rideId": "af46b33744bfb96b8d2f87e1"
+    },
+    {
+      "round": 3,
+      "index": 40,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.1366,
+      "rideId": "4ecd9d1937bf59e22e9a4c1b"
+    },
+    {
+      "round": 3,
+      "index": 41,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 0.5456,
+      "rideId": "af8fb40e1fda8026ddb86f37"
+    },
+    {
+      "round": 3,
+      "index": 42,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.0696,
+      "rideId": "3a1faa8c288e5f2ef69177fb"
+    },
+    {
+      "round": 3,
+      "index": 43,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.0924,
+      "rideId": "3b08285c507f8b60298fb234"
+    },
+    {
+      "round": 3,
+      "index": 44,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.5776,
+      "rideId": "f85845cd4909aab46217f9b0"
+    },
+    {
+      "round": 3,
+      "index": 45,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.7102,
+      "rideId": "5cd9f894b1bba0f5ccd58b19"
+    },
+    {
+      "round": 3,
+      "index": 46,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.1454,
+      "rideId": "4c1e3528df0b556d67d0fda3"
+    },
+    {
+      "round": 3,
+      "index": 47,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.0639,
+      "rideId": "9c9d9939a54fb998b721be43"
+    },
+    {
+      "round": 3,
+      "index": 48,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 0.5266,
+      "rideId": "d9b61a1340fda8462a98ead1"
+    },
+    {
+      "round": 3,
+      "index": 49,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.1222,
+      "rideId": "90f6859174d76f652c4ca7c5"
+    },
+    {
+      "round": 3,
+      "index": 50,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.0865,
+      "rideId": "2c5d01e09fe6f99a944c1f08"
+    },
+    {
+      "round": 3,
+      "index": 51,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 0.5449,
+      "rideId": "07ded082cd6ad86db22576a8"
+    },
+    {
+      "round": 3,
+      "index": 52,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.1356,
+      "rideId": "a51126dedca40f261bae88ff"
+    },
+    {
+      "round": 3,
+      "index": 53,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 0.5485,
+      "rideId": "0a0b57656acd5f134d9e2d05"
+    },
+    {
+      "round": 3,
+      "index": 54,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.1336,
+      "rideId": "8778d9ef72239990498156c2"
+    },
+    {
+      "round": 3,
+      "index": 55,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.0862,
+      "rideId": "b2a4a7d4737d8885222b8648"
+    },
+    {
+      "round": 3,
+      "index": 56,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.1041,
+      "rideId": "365fe1820626d8aaf2d354f8"
+    },
+    {
+      "round": 3,
+      "index": 57,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 0.5319,
+      "rideId": "d6d90642a2e3a2144f52dae1"
+    },
+    {
+      "round": 3,
+      "index": 58,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.1165,
+      "rideId": "2f3b3f73d1404df8a4a3e819"
+    },
+    {
+      "round": 3,
+      "index": 59,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.2507,
+      "rideId": "d212b5ae6e033d5f5185ecba"
+    },
+    {
+      "round": 3,
+      "index": 60,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.4596,
+      "rideId": "4b53693d50175febc6666de1"
+    },
+    {
+      "round": 3,
+      "index": 61,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.1139,
+      "rideId": "56177f831b819d9f3216de91"
+    },
+    {
+      "round": 3,
+      "index": 62,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.2958,
+      "rideId": "fee490b532ff0ed42dd53fc4"
+    },
+    {
+      "round": 3,
+      "index": 63,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.1307,
+      "rideId": "63e4799b4a4bf1f8a947c6c3"
+    },
+    {
+      "round": 3,
+      "index": 64,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.0894,
+      "rideId": "876c21c958d6955d726e3950"
+    },
+    {
+      "round": 3,
+      "index": 65,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 0.5268,
+      "rideId": "d986c20c543ea568f3469186"
+    },
+    {
+      "round": 3,
+      "index": 66,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 0.6767,
+      "rideId": "0dad6836aa93d3d511db241d"
+    },
+    {
+      "round": 3,
+      "index": 67,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.7823,
+      "rideId": "802db7b522c9cad37bb835b1"
+    },
+    {
+      "round": 3,
+      "index": 68,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.05,
+      "rideId": "d21f9b9c33264d21f4a03250"
+    },
+    {
+      "round": 3,
+      "index": 69,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.0665,
+      "rideId": "2305fe478f8b2eb283a335be"
+    },
+    {
+      "round": 3,
+      "index": 70,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 0.5406,
+      "rideId": "bf556642d9d2c4ead772ceda"
+    },
+    {
+      "round": 3,
+      "index": 71,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.043,
+      "rideId": "bacd5b8d970bb4559c0588b4"
+    },
+    {
+      "round": 3,
+      "index": 72,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 0.5165,
+      "rideId": "646b88bece99c5345d2aaaa5"
+    },
+    {
+      "round": 3,
+      "index": 73,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.1308,
+      "rideId": "bcfccf18be2e9993a261d31d"
+    },
+    {
+      "round": 3,
+      "index": 74,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 0.5305,
+      "rideId": "50c8bffd3ab91794d41a873e"
+    },
+    {
+      "round": 3,
+      "index": 75,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.1459,
+      "rideId": "358881dac1a28c13c000dafb"
+    },
+    {
+      "round": 3,
+      "index": 76,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.3056,
+      "rideId": "9af57965aea806c8084174ee"
+    },
+    {
+      "round": 3,
+      "index": 77,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.312,
+      "rideId": "7139ece0ab39d10fe730f97d"
+    },
+    {
+      "round": 3,
+      "index": 78,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.0973,
+      "rideId": "9dbbb87b5aaf8f9b520f04a7"
+    },
+    {
+      "round": 3,
+      "index": 79,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.2577,
+      "rideId": "7b2fd312e088162a9225ae05"
+    },
+    {
+      "round": 3,
+      "index": 80,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.0589,
+      "rideId": "1b79df533fe7f4cec2533fef"
+    },
+    {
+      "round": 3,
+      "index": 81,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 0.5185,
+      "rideId": "d6e8e09dccc895bf762642a3"
+    },
+    {
+      "round": 3,
+      "index": 82,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.1976,
+      "rideId": "f83f7cecf0146bbc90b22db3"
+    },
+    {
+      "round": 3,
+      "index": 83,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 0.5207,
+      "rideId": "131a97d82710ac55ca45f46e"
+    },
+    {
+      "round": 3,
+      "index": 84,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.3042,
+      "rideId": "35321052980a0d28454bf28b"
+    },
+    {
+      "round": 3,
+      "index": 85,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 0.5227,
+      "rideId": "534194d2efb9f27644136c48"
+    },
+    {
+      "round": 3,
+      "index": 86,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 0.632,
+      "rideId": "f85e975d9cc8af81ddc18d02"
+    },
+    {
+      "round": 3,
+      "index": 87,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.1274,
+      "rideId": "8ea3adc33d682de7b110a46e"
+    },
+    {
+      "round": 3,
+      "index": 88,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.2161,
+      "rideId": "4e144cdffffe41f7cdef2194"
+    },
+    {
+      "round": 3,
+      "index": 89,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 0.5209,
+      "rideId": "0cb21d660f8cc17ce6d4e49e"
+    },
+    {
+      "round": 3,
+      "index": 90,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.0441,
+      "rideId": "e6a55e1a73ca53d289a75f51"
+    },
+    {
+      "round": 3,
+      "index": 91,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.072,
+      "rideId": "832352ba6723006e9ca141a0"
+    },
+    {
+      "round": 3,
+      "index": 92,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.1114,
+      "rideId": "bffcf139e56c7d0bbeaecb2b"
+    },
+    {
+      "round": 3,
+      "index": 93,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 0.962,
+      "rideId": "a46ce1e1a80909c2e7cff119"
+    },
+    {
+      "round": 3,
+      "index": 94,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.6703,
+      "rideId": "d001d009383c5168dba7d5e0"
+    },
+    {
+      "round": 3,
+      "index": 95,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 0.9366,
+      "rideId": "f956db73fb68df1dbd8b2766"
+    },
+    {
+      "round": 3,
+      "index": 96,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.0392,
+      "rideId": "6c7a0060381edf62043d4fa5"
+    },
+    {
+      "round": 3,
+      "index": 97,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.2071,
+      "rideId": "f7f2f9bb77480fc1ca2d2e63"
+    },
+    {
+      "round": 3,
+      "index": 98,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 0.5374,
+      "rideId": "25d98578a28503289b70d573"
+    },
+    {
+      "round": 3,
+      "index": 99,
+      "httpStatus": 201,
+      "outcome": "no_driver",
+      "latencyMs": 1.2862,
+      "rideId": "5432aa41f3311888a867e1d3"
+    }
+  ]
+}

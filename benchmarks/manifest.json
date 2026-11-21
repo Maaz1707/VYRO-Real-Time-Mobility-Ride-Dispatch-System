@@ -1,0 +1,81 @@
+{
+  "backendSources": [
+    {
+      "sha256": "89c5a07704f219cd28e00f23158d9691e62a3686243dba87e320981969a99229",
+      "path": "backend/cmd/benchmark/main_test.go"
+    },
+    {
+      "sha256": "9f78f2b4a13aca65707c640959bf432670a62f9a482078854b48ec9a44042b8b",
+      "path": "backend/cmd/benchmark/main.go"
+    },
+    {
+      "sha256": "99ca97ec2767a880060a5c8226638b03b05269341cab5a33672946dbfea10e25",
+      "path": "backend/go.mod"
+    },
+    {
+      "sha256": "4e7e05768d607a1cc09d1dbe92d138751e9111200e8eadf2be5d7c99b189e834",
+      "path": "backend/go.sum"
+    },
+    {
+      "sha256": "57d1a17fbdb307b42e9e5dfcb054915937757ac2b17c3162ad60cc460167f8c2",
+      "path": "backend/main_test.go"
+    },
+    {
+      "sha256": "c7133182c8b246ac6f7bb0c9d886036b404757c3b41d6cb3613fbfbc4061dbf2",
+      "path": "backend/main.go"
+    },
+    {
+      "sha256": "7c3ba2e090025911336a8e01064cf45eff5f48b141f8e1db00f786023f45de6d",
+      "path": "backend/postgres.go"
+    },
+    {
+      "sha256": "236e7c5e42f22a7f88ca1759d5ef8c84c1aec8ce2f84bab70fac0485840e6a78",
+      "path": "backend/simulation_test.go"
+    },
+    {
+      "sha256": "522bcdf6c3a0b11f7dd21454c9a5ff4d66886124daaee10c8a0e98d53041abac",
+      "path": "backend/simulation.go"
+    },
+    {
+      "sha256": "dad3f479e4a1105dcc20fac0ac89b9e5dcf9113d1ad0798a5695390b9d340f6f",
+      "path": "backend/telemetry_test.go"
+    },
+    {
+      "sha256": "d8dc8fe9eb1b8f59de178552eb6c2b6436ae12fd5812ee2ffb40c0e6b24fd608",
+      "path": "backend/telemetry.go"
+    }
+  ],
+  "reports": [
+    {
+      "sha256": "6120eb8e07c97d2a049e34c275db6c88bb0b4ad367b639d061c0bc75c3ff6bd4",
+      "name": "saturation-c1",
+      "createdAt": "2026-11-21T07:06:14.3109074Z"
+    },
+    {
+      "sha256": "96484a5156ca66f3ca227b63dfb6615448cc9a2cd32a8100ea5172a084e5bdd9",
+      "name": "saturation-c10",
+      "createdAt": "2026-11-21T07:06:14.9854487Z"
+    },
+    {
+      "sha256": "06114e6ee1ba131151f18b01ac502f99f6be421c1d09816b731d99a16939be20",
+      "name": "lifecycle-c1",
+      "createdAt": "2026-11-21T07:06:15.5690239Z"
+    },
+    {
+      "sha256": "32a4f28ec50a64257c485f0cb4cfd902109a0bc65f721a228c1dba1e898d3a14",
+      "name": "lifecycle-c10",
+      "createdAt": "2026-11-21T07:06:16.4712666Z"
+    },
+    {
+      "sha256": "2755a7865b07ac6307f1cf7af8f605e3d35bd6ab8969c3d11241b6895469ec90",
+      "name": "mixed-c1",
+      "createdAt": "2026-11-21T07:06:16.8175131Z"
+    },
+    {
+      "sha256": "a14f69702eaaf745c3f466d53d50eb8a64454104421faeb8bba77abe775b2cae",
+      "name": "mixed-c10",
+      "createdAt": "2026-11-21T07:06:17.3442805Z"
+    }
+  ],
+  "generatedAt": "2026-11-21T07:07:24.8507732Z"
+}
